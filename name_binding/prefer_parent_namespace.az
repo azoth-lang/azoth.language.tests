@@ -1,0 +1,17 @@
+namespace nested
+{
+    public fn function() -> byte
+    {
+        return 1;
+    }
+}
+
+public fn function() -> byte
+{
+    return 0;
+}
+
+public fn main() -> byte
+{
+    return function();
+}

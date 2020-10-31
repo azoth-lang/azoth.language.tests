@@ -1,0 +1,29 @@
+public mut class Test
+{
+}
+
+public fn main()
+{
+    let m: iso mut Test = new Test();
+    let i: iso Test = new Test();
+
+    mutable_lent(mut m);
+    mutable_lent(m); // ERROR must explicitly pass mutable
+
+    read_only_lent(i);
+    read_only_lent(mut i); // ERROR can't borrow immutable value mutably
+
+    take(move m);
+}
+
+public fn mutable_lent(t: mut Test)
+{
+}
+
+public fn read_only_lent(t: Test)
+{
+}
+
+public fn take(t: iso Test)
+{
+}

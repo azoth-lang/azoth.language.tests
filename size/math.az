@@ -1,0 +1,26 @@
+public fn test_math(a: size, b: size)
+{
+    let x = a + b;
+    let x = a - b;
+    let x = a * b;
+    let x = a / b;
+    let x = a.remainder(b);
+
+    var y: size = 0;
+    y += a;
+    y -= a;
+    y *= a;
+    y /= a;
+
+    let c = a == b;
+    let c = a =/= b;
+    let c = a > b;
+    let c = a >= b;
+    let c = a < b;
+    let c = a <= b;
+}
+
+public fn main()
+{
+    test_math(2, 1);
+}

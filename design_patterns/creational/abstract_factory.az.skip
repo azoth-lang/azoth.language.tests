@@ -1,0 +1,100 @@
+// stdout file: abstract_factory.txt
+
+// The one issue with the abstract factory pattern is whether the return types
+// can be `iso` or must be `owned`. Clearly any arguments will be assumed to
+// be reachable, but what can the base class assume about the isolation of the
+// returned objects? This could be a failure to be able to properly abstract
+// from the implementations of the concrete factories.
+
+// Factories
+
+public trait Factory
+{
+    public fn create_product_a() -> iso Product_A;
+    public fn create_product_b() -> iso Product_B;
+}
+
+public class Concrete_Factory_1 <: Abstract_Factory
+{
+    public fn create_product_a() -> iso Product_A
+    {
+        return new Product_A1();
+    }
+
+    public fn create_product_b() -> iso Product_B
+    {
+        return new Product_B1();
+    }
+}
+
+public class Concrete_Factory_2 <: Abstract_Factory
+{
+    public fn create_product_a() -> iso Product_A
+    {
+        return new Product_A2();
+    }
+
+    public fn create_product_b() -> iso Product_B
+    {
+        return new Product_B2();
+    }
+}
+
+// Products
+
+public trait Product_A
+{
+    // TODO use a getter
+    public fn get_name() -> string;
+}
+
+public class Product_A1 <: Product_A
+{
+    public fn get_name() -> string
+    {
+        return "A1";
+    }
+}
+
+public class Product_A2 <: Product_A
+{
+    public fn get_name() -> string
+    {
+        return "A2";
+    }
+}
+
+public trait Product_B
+{
+    // TODO use a getter
+    public fn get_name() -> string;
+}
+
+public class Product_B1 <: Product_B
+{
+    public fn get_name() -> string
+    {
+        return "B1";
+    }
+}
+
+public class Product_B2 <: Product_B
+{
+    public fn get_name() -> string
+    {
+        return "B1";
+    }
+}
+
+// Client
+
+public fn main(console: mut Console)
+{
+    let f1 = new Concrete_Factory_1();
+    console.write_line(f1.create_product_a().get_name());
+    console.write_line(f1.create_product_b().get_name());
+
+    let f2 = new Concrete_Factory_2();
+    console.write_line(f2.create_product_a().get_name());
+    console.write_line(f2.create_product_b().get_name());
+}

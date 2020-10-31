@@ -1,0 +1,10 @@
+// exit code: 10
+public fn main() -> byte
+{
+    var i: byte = 0;
+    while i < 10
+    {
+        i = i + 1;
+    }
+    return i;
+}

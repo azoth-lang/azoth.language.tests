@@ -1,0 +1,16 @@
+public fn foo(x: int = 0) // ERROR default values not implemented
+{
+}
+
+public class Test
+{
+    let field: int;
+
+    public new(.field = -1) // ERROR default values not implemented
+    {
+    }
+
+    public fn method(p: int = 42) // ERROR default values not implemented
+    {
+    }
+}

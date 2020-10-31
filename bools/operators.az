@@ -1,0 +1,20 @@
+public fn parameter_type(_: bool) { }
+public fn return_type(a: bool) -> bool { return a; }
+
+public fn logical_operators(a: bool, b: bool)
+{
+    a and b;
+    a or b;
+    not a;
+}
+
+public fn arithmetic_operators(a: bool, b: bool)
+{
+    a + b; // ERROR
+}
+
+public fn literals()
+{
+    var x: bool = true;
+    x = false;
+}

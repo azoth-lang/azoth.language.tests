@@ -1,0 +1,32 @@
+public fn main()
+{
+    optional_parameter(none);
+    optional_parameter(42);
+    optional_variables();
+    let x: int? = optional_return(false);
+    let y: int? = optional_return(true);
+}
+
+public fn optional_parameter(_: int?)
+{
+}
+
+public fn optional_variables()
+{
+    let x: int? = none;
+    let y: int? = 43;
+    var z: int? = none;
+    z = 34;
+}
+
+public fn optional_return(return_none: bool) -> int?
+{
+    if return_none
+    {
+        return none;
+    }
+    else
+    {
+        return 35;
+    }
+}

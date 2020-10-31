@@ -1,0 +1,15 @@
+public mut class Test
+{
+    public fn read(self) { }
+    public fn mutate(mut self) { }
+}
+
+public fn main()
+{
+    let x = new Test();
+    x.read();
+    x.mutate(); // ERROR not mutable
+    let y: mut = new Test();
+    y.read();
+    y.mutate();
+}

@@ -1,0 +1,6 @@
+public fn func()
+{
+    return;
+}
+
+public fn main() { }

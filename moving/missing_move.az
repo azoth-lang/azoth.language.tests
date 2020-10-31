@@ -1,0 +1,13 @@
+public fn main()
+{
+    let book: Book = new Book();
+    take(book); // ERROR need `move`
+}
+
+public class Book
+{
+}
+
+public fn take(book: iso Book)
+{
+}

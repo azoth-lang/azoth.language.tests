@@ -1,0 +1,7 @@
+// exit code: 42
+
+// Unix platforms really only support byte error codes
+public fn main() -> byte
+{
+    return 42;
+}

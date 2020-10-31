@@ -1,0 +1,14 @@
+// exit code: 42
+
+public class Book
+{
+    public let page_count: byte;
+
+    public new(.page_count) { }
+}
+
+public fn main() -> byte
+{
+    let book = new Book(42);
+    return book.page_count;
+}

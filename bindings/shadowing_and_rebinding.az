@@ -1,0 +1,154 @@
+public fn main()
+{
+    value_type_rebinding();
+    value_type_shadowing();
+    value_type_not_shadowing();
+    value_type_control_flow_not_rebinding(true);
+
+    reference_type_rebinding();
+    reference_type_shadowing();
+    reference_type_not_shadowing();
+    reference_type_control_flow_not_rebinding(true);
+}
+
+public fn use_int(_: int)
+{
+}
+
+public fn value_type_rebinding()
+{
+    let w: int = 1;
+    let w: int = 2;
+
+    let x: int = 1;
+    var x: int = 2; // ERROR can't rebind `let` with `var`
+
+    var y: int = 1;
+    let y: int = 2; // ERROR can't rebind `var` with `let`
+
+    var z: int = 1;
+    var z: int = 2; // ERROR can't rebind `var` with `var`
+}
+
+public fn value_type_shadowing()
+{
+    let v: int = 1;
+    {
+        let v: int = 2;
+    }
+
+    let w: int = 1;
+    {
+        let w: int = 2; // ERROR can't shadow when outer binding used after nested scope
+    }
+    use_int(w);
+
+    let x: int = 1;
+    {
+        var x: int = 2; // ERROR can't shadow `let` with `var`
+    }
+
+    var y: int = 1;
+    {
+        let y: int = 2; // ERROR can't shadow `var` with `let`
+    }
+
+    var z: int = 1;
+    {
+        var z: int = 2; // ERROR can't shadow `var` with `var`
+    }
+}
+
+public fn value_type_not_shadowing()
+{
+    {
+        var x: int = 1;
+    }
+    {
+        var x: int = 2;
+    }
+}
+
+public fn value_type_control_flow_not_rebinding(c: bool)
+{
+    if c
+    {
+        let x: int = 1;
+        return;
+    }
+
+    let x: int = 2;
+}
+
+public class Test
+{
+}
+
+public fn reference_type_rebinding()
+{
+    let w: Test = new Test();
+    let w: Test = new Test();
+
+    let x: Test = new Test();
+    var x: Test = new Test(); // ERROR can't rebind `let` with `var`
+
+    var y: Test = new Test();
+    let y: Test = new Test(); // ERROR can't rebind `var` with `let`
+
+    var z: Test = new Test();
+    var z: Test = new Test(); // ERROR can't rebind `var` with `var`
+}
+
+public fn use_test(_: Test)
+{
+}
+
+public fn reference_type_shadowing()
+{
+    let v: Test = new Test();
+    {
+        let v: Test = new Test();
+    }
+
+    let w: Test = new Test();
+    {
+        let w: Test = new Test(); // ERROR let can't shadow when outer let is used after end of scope
+    }
+    use_test(w);
+
+    let x: Test = new Test();
+    {
+        var x: Test = new Test(); // ERROR var can't shadow let
+    }
+
+    var y: Test = new Test();
+    {
+        let y: Test = new Test(); // ERROR let can't shadow var
+    }
+
+    var z: Test = new Test();
+    {
+        var z: Test = new Test(); // ERROR var can't shadow var
+    }
+}
+
+public fn reference_type_not_shadowing()
+{
+    {
+        var x: Test = new Test();
+    }
+    {
+        var x: Test = new Test();
+    }
+}
+
+public fn reference_type_control_flow_not_rebinding(c: bool)
+{
+    if c
+    {
+        let x: int = 1;
+        return;
+    }
+
+    let x: int = 2;
+}

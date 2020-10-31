@@ -1,0 +1,14 @@
+// exit code: 42
+
+namespace nested
+{
+    public fn function() -> byte
+    {
+        return 42;
+    }
+}
+
+public fn main() -> byte
+{
+    return nested.function();
+}

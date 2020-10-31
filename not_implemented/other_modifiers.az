@@ -1,0 +1,18 @@
+public mut class Test // `mut` is supported and needed on classes though
+{
+    move fn \move() // ERROR `move` modifiers are not implemented
+    {
+    }
+
+    mut fn \mut() // ERROR `mut` modifiers are not implemented
+    {
+    }
+
+    safe fn \mut() // ERROR `safe` modifiers are not implemented
+    {
+    }
+
+    unsafe fn \mut() // ERROR `unsafe` modifiers are not implemented
+    {
+    }
+}

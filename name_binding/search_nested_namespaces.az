@@ -1,0 +1,9 @@
+namespace nested
+{
+    public fn function() {}
+}
+
+public fn main()
+{
+    function();
+}

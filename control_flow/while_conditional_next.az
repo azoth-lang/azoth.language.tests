@@ -1,0 +1,13 @@
+// exit code: 10
+public fn main() -> byte
+{
+    var run: bool = true;
+    var i: byte = 0;
+    while run
+    {
+        i = i + 1;
+        if(i < 10) => next;
+        run = false;
+    }
+    return i;
+}

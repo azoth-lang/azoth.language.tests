@@ -1,0 +1,16 @@
+// exit code: 42
+
+// The nested1 namespace is implicitly declared because it doesn't have its own
+// declaration.
+namespace nested1.nested2
+{
+    public fn function() -> byte
+    {
+        return 42;
+    }
+}
+
+public fn main() -> byte
+{
+    return nested1.nested2.function();
+}

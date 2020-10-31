@@ -1,0 +1,14 @@
+// exit code: 42
+
+public class Test
+{
+    public fn func() -> byte
+    {
+        return 42;
+    }
+}
+
+public fn main() -> byte
+{
+    return Test.func();
+}

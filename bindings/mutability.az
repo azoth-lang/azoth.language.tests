@@ -1,0 +1,28 @@
+public fn main()
+{
+    value_type_binding_mutability();
+
+    reference_type_binding_mutability();
+}
+
+public fn value_type_binding_mutability()
+{
+    let x: int = 1;
+    x = 2; // ERROR binding `x` is immutable
+
+    var y: int = 1;
+    y = 2;
+}
+
+public class Test
+{
+}
+
+public fn reference_type_binding_mutability()
+{
+    let x: Test = new Test();
+    x = new Test(); // ERROR binding `x` is immutable
+
+    var y: Test = new Test();
+    y = new Test();
+}

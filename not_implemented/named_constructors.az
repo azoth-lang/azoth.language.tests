@@ -1,0 +1,6 @@
+public class Test
+{
+    public new named() // ERROR named constructors not implemented
+    {
+    }
+}

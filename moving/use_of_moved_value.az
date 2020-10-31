@@ -1,0 +1,14 @@
+public fn main()
+{
+    let book: iso Book = new Book();
+    take(move book);
+    let borrow = book; // ERROR use of moved value
+}
+
+public class Book
+{
+}
+
+public fn take(book: iso Book)
+{
+}

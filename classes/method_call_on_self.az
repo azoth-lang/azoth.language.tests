@@ -1,0 +1,20 @@
+// exit code: 42
+
+public class Test
+{
+    public fn method(self) -> byte
+    {
+        return .private_method();
+    }
+
+    fn private_method(self) -> byte
+    {
+        return 42;
+    }
+}
+
+public fn main() -> byte
+{
+    let t: Test = new Test();
+    return t.method();
+}

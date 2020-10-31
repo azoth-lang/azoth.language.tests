@@ -1,0 +1,16 @@
+public class Source
+{
+    public fn create(self) -> iso Result
+    {
+        return new Result();
+    }
+}
+
+public class Result
+{
+}
+
+public fn main()
+{
+    new Source().create();
+}

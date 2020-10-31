@@ -1,0 +1,3 @@
+public public fn foo(x: int) // ERROR Multiple modifiers not implemented
+{
+}

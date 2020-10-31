@@ -1,0 +1,6 @@
+// stdout file: hello_world.txt
+
+public fn main(console: mut Console)
+{
+    console.write_line("Hello World!");
+}

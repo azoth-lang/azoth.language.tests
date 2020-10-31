@@ -1,0 +1,16 @@
+public fn main()
+{
+    foreach i: int in 45 // ERROR Foreach in non range expressions
+    {
+    }
+
+    let x: int;
+    foreach i: int in x // ERROR Foreach in non range expressions
+    {
+    }
+
+    let y: int;
+    foreach i: int in x+y // ERROR Foreach in non range expressions
+    {
+    }
+}

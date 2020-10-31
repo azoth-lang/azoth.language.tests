@@ -1,0 +1,9 @@
+*           text=auto
+
+*.vson      text eol=lf encoding=UTF-8
+*.json      text encoding=UTF-8
+*.az        text encoding=UTF-8
+*.md        text encoding=UTF-8
+*.c         text eol=lf
+*.h         text eol=lf
+*.rsrc      text eol=lf

@@ -1,0 +1,4 @@
+public class Test
+{
+    let field: int = 42; // ERROR Field initializers not implemented
+}
