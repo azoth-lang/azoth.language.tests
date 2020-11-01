@@ -4,8 +4,8 @@ public mut class Test
 
 public fn main()
 {
-    let m: iso mut Test = new Test();
-    let i: iso Test = new Test();
+    let m: iso Test = new Test();
+    let i: const Test = new Test();
 
     mutable_lent(mut m);
     mutable_lent(m); // ERROR must explicitly pass mutable

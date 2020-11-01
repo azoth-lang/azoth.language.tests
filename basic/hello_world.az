@@ -1,6 +1,6 @@
 // stdout file: hello_world.txt
 
-public fn main(console: mut Console)
+public fn main(output: mut TestOutput)
 {
-    console.write_line("Hello World!");
+    output.write_line("Hello World!");
 }
