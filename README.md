@@ -1,4 +1,4 @@
-# Azoth.Language.Tests
+# Azoth Language Tests
 
 These tests verify a compiler/implementation of the Azoth language. They are written so they do not rely on the Azoth standard library or any other Azoth packages. They are truly a test of the language only and not of any of the standard library or package ecosystem. However, the tests do require a special test package to be provided by the test harness/platform. This is a minimal package that must be implemented. It is intentionally kept small to make implementing a test harness easy.
 
@@ -29,7 +29,6 @@ published copy struct string
 The `TestOutput` trait provided by the test package must match the declaration below. This is a capability accepted by the main function.
 
 ```azoth
-
 published trait TestOutput
 {
     published fn write(mut self, value: string);
@@ -38,7 +37,6 @@ published trait TestOutput
 
     published fn write_line(mut self);
 }
-
 ```
 
 ### Convert to String
