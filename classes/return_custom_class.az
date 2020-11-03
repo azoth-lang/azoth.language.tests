@@ -1,6 +1,6 @@
 public class Source
 {
-    public fn create(self) -> iso Result
+    public fn create(self) -> const Result
     {
         return new Result();
     }
