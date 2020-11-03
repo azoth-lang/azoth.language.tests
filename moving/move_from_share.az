@@ -1,11 +1,11 @@
 public fn main()
 {
-    let book: Book = new Book();
+    let book: iso Book = new Book();
     let borrow: Book = book;
     take(move borrow); // ERROR can't move from a share
 }
 
-public class Book
+public mut class Book
 {
 }
 
