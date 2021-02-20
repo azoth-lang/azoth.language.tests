@@ -1,4 +1,4 @@
-public fn func(_: int)
+public fn func(_: byte)
 {
 }
 

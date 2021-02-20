@@ -1,0 +1,8 @@
+public fn func(_: byte)
+{
+}
+
+public fn main()
+{
+    func(0);
+}
