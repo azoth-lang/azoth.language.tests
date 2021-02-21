@@ -6,7 +6,7 @@ public class Inner
 
     public new()
     {
-        self.value = -1;
+        self.value = 1;
     }
 }
 
