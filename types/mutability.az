@@ -11,7 +11,7 @@ public fn main()
     mutable_lent(m); // ERROR must explicitly pass mutable
 
     read_only_lent(i);
-    read_only_lent(mut i); // ERROR can't borrow immutable value mutably
+    read_only_lent(mut i); // ERROR can't use immutable value mutably
 
     take(move m);
 }

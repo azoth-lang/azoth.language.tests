@@ -1,0 +1,12 @@
+public class Example
+{
+    public let x: int = return -1; // ERROR
+}
+
+public fn main()
+{
+    let c = false;
+    loop (c)
+    {
+    }
+}
