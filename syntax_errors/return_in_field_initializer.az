@@ -5,8 +5,4 @@ public class Example
 
 public fn main()
 {
-    let c = false;
-    loop (c)
-    {
-    }
 }
