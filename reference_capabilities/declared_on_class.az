@@ -1,0 +1,19 @@
+public const class Const
+{
+}
+
+public /* readonly */ class ReadOnly
+{
+}
+
+public mut class Mut
+{
+}
+
+public iso class Iso
+{
+}
+
+public id class Iso // ERROR not allowed to modify a class
+{
+}

@@ -1,0 +1,13 @@
+public iso class Book
+{
+    // `iso self` allows a consuming pattern
+    public fn isolated(iso self) { }
+    public fn mutable(mut self) { }
+    public fn read_only(self) { }
+    // `id self` is a little odd but with additional arguments could be reasonable
+    public fn identity(id self) { }
+}
+
+public fn main()
+{
+}
