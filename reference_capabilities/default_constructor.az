@@ -1,0 +1,41 @@
+// The default constructors of classes with any reference capability need to return `iso` because it
+// is always possible to have `iso` references and move them around. Even `const` classes could be
+// subtyped in a way that allows `iso`.
+
+public fn main()
+{
+    let c: iso Const = new Const();
+    // TODO sealed not yet implemented
+    // let sc: iso SealedConst = new SealedConst(); // ERROR constructor returns const
+    // TODO subclassing not yet implemented
+    // let is: iso IsoSubclass = new IsoSubclass();
+    let r: iso ReadOnly = new ReadOnly();
+    let m: iso Mut = new Mut();
+    let i: iso Iso = new Iso();
+}
+
+public const class Const
+{
+}
+
+// TODO sealed not yet implemented
+/*public sealed const class SealedConst
+{
+}*/
+
+// TODO subclassing not yet implemented
+/*public iso class IsoSubclass : Const
+{
+}*/
+
+public /* readonly */ class ReadOnly
+{
+}
+
+public mut class Mut
+{
+}
+
+public iso class Iso
+{
+}
