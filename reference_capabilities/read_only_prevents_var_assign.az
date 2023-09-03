@@ -1,0 +1,9 @@
+public mut class Book
+{
+    var pages: int;
+
+    public fn example(self)
+    {
+        self.pages = 100; // ERROR cannot assign to read only
+    }
+}
