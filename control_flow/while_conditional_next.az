@@ -6,7 +6,7 @@ public fn main() -> byte
     while run
     {
         i = i + 1;
-        if(i < 10) => next;
+        if i < 10 => next;
         run = false;
     }
     return i;
