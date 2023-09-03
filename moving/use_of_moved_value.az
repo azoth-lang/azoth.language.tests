@@ -2,6 +2,7 @@ public fn main()
 {
     let book: iso Book = new Book();
     take(move book);
+    // TODO shouldn't this just make borrow an `id Book`?
     let borrow = book; // ERROR use of moved value
 }
 

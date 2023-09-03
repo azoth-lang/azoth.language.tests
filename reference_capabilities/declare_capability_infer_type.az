@@ -1,15 +1,15 @@
 public fn main()
 {
-    let book1: mut Book = new Book(); // a mutable reference
+    let book1: mut = new Book(); // a mutable reference
     book1.modify();
 
-    let book2: const Book = new Book(); // cannot ever be mutated.
+    let book2: const = new Book(); // cannot ever be mutated.
     book2.modify(); // ERROR cannot mutate an immutable object.
 
-    let reader1: Book = book1; // ok; cannot be mutated by this reference.
+    let reader1 = book1; // ok; cannot be mutated by this reference.
     reader1.modify(); // ERROR cannot mutate a readonly object.
 
-    let reader2: Book = book2; // ok; still cannot be mutated by this reference.
+    let reader2 = book2; // ok; still cannot be mutated by this reference.
     reader2.modify(); // ERROR cannot mutate a readonly object.
 }
 

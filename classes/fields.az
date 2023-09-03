@@ -1,6 +1,6 @@
 // exit code: 42
 
-public class Inner
+public mut class Inner
 {
     public var value: byte;
 
@@ -10,7 +10,7 @@ public class Inner
     }
 }
 
-public class Outer
+public mut class Outer
 {
     public var inner: Inner;
 
@@ -22,7 +22,7 @@ public class Outer
 
 public fn main() -> byte
 {
-    let t = new Outer();
+    let t: mut Outer = new Outer();
     t.inner.value = 42;
     return t.inner.value;
 }
