@@ -1,0 +1,12 @@
+public fn main()
+{
+    let book: mut Book = new Book();
+    book.modify();
+
+    let frozenBook: const = book;
+}
+
+public iso class Book
+{
+    public fn modify(mut self) { }
+}
