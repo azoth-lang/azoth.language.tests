@@ -6,6 +6,7 @@ public fn main()
     let borrow = book; // ERROR use of moved value
 }
 
+// TODO struct not implemented
 public mut move struct Book
 {
 }

@@ -1,0 +1,3 @@
+public mut move struct Book // ERROR struct not implemented
+{
+}
