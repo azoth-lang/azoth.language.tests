@@ -1,0 +1,12 @@
+public fn main()
+{
+    let book: iso Book = new Book();
+    book.take();
+}
+
+public mut class Book
+{
+    public fn take(iso self)
+    {
+    }
+}

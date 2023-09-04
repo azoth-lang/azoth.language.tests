@@ -1,7 +1,11 @@
 public fn main()
 {
     let book: mut Book = new Book();
-    book.modify();
+
+    {
+        let loan = mut book;
+        loan.modify();
+    }
 
     take(move book);
 

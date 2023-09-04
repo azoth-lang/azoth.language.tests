@@ -2,7 +2,7 @@ public fn main()
 {
     let book: iso Book = new Book();
     let borrow: Book = book;
-    // TODO why doesn't this just recover isolation?
+    // TODO this doesn't recover isolation because `book` still references it, but `book` is unused
     take(move borrow); // ERROR can't move from a share
 }
 
