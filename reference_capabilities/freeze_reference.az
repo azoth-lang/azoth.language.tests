@@ -8,7 +8,7 @@ public fn main()
     book.modify(); // ERROR `const` due to flow typing
 }
 
-public iso class Book
+public mut class Book
 {
     public fn modify(mut self) { }
 }

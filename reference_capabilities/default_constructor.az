@@ -24,7 +24,7 @@ public const class Const
 }*/
 
 // TODO subclassing not yet implemented
-/*public iso class IsoSubclass : Const
+/*public mut class IsoSubclass : Const
 {
 }*/
 

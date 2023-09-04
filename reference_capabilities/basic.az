@@ -13,7 +13,7 @@ public fn main()
     reader2.modify(); // ERROR cannot mutate a readonly object.
 }
 
-public iso class Book
+public mut class Book
 {
     public fn modify(mut self) { }
 }
