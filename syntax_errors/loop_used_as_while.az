@@ -1,6 +1,7 @@
 // compile: errors
 public fn main()
 {
+    // at one point, this caused the parser to fail
     let c = false;
     loop c
     {
