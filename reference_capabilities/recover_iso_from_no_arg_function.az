@@ -1,0 +1,19 @@
+// exit code: 42
+
+public fn main() -> byte
+{
+    let b: iso = create();
+    return b.value;
+}
+
+public mut class ByteBox
+{
+    public var value: byte;
+}
+
+public fn create() -> mut ByteBox
+{
+    let b: mut = new ByteBox();
+    b.value = 42;
+    return b;
+}
