@@ -11,6 +11,16 @@ public fn main()
 
     let reader2 = book2; // ok; still cannot be mutated by this reference.
     reader2.modify(); // ERROR cannot mutate a readonly object.
+
+    // Test move with explicit reference capability
+    let book3: const = move book1;
+    book1.modify(); // ERROR cannot mutate through `id` reference.
+    book3.modify(); // ERROR cannot mutate an immutable object.
+
+    // Test declaring from mutable expression
+    let book4: mut = new Book();
+    let book5 = mut book4;
+    book5.modify();
 }
 
 public mut class Book
