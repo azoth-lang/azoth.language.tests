@@ -2,12 +2,17 @@ public fn main()
 {
     optional_parameter(none);
     optional_parameter(42);
+    non_optional_parameter(none); // ERROR cannot convert `none` to `int`
     optional_variables();
     let x: int? = optional_return(false);
     let y: int? = optional_return(true);
 }
 
 public fn optional_parameter(_: int?)
+{
+}
+
+public fn non_optional_parameter(_: int)
 {
 }
 

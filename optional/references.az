@@ -1,0 +1,41 @@
+public fn main()
+{
+    optional_parameter(none);
+    optional_parameter(new Book());
+    non_optional_parameter(none); // ERROR cannot convert `none` to `Book`
+    optional_variables();
+    let x: Book? = optional_return(false);
+    let y: Book? = optional_return(true);
+}
+
+public fn optional_parameter(_: Book?)
+{
+}
+
+public fn non_optional_parameter(_: Book)
+{
+}
+
+public fn optional_variables()
+{
+    let x: Book? = none;
+    let y: Book? = new Book();
+    var z: Book? = none;
+    z = new Book();
+}
+
+public fn optional_return(return_none: bool) -> Book?
+{
+    if return_none
+    {
+        return none;
+    }
+    else
+    {
+        return new Book();
+    }
+}
+
+public class Book
+{
+}
