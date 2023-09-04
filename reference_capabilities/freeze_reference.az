@@ -3,18 +3,12 @@ public fn main()
     let book: mut Book = new Book();
     book.modify();
 
-    let frozenBook: const = book;
-    //freeze(book);
-    //freeze(freeze book);
+    let frozenBook: const = freeze book;
 
     book.modify(); // ERROR `const` due to flow typing
 }
 
 public mut class Book
 {
-    public fn modify(mut self) { }
-}
-
-public fn freeze(book: const Book)
-{
+    public fn modify(mut self) {  }
 }

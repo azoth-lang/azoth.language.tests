@@ -1,12 +1,12 @@
 public fn main()
 {
     let book: iso Book = new Book();
-    book.freeze();
+    book.\freeze();
 }
 
 public mut class Book
 {
-    public fn freeze(const self)
+    public fn \freeze(const self)
     {
     }
 }
