@@ -12,7 +12,7 @@ public mut class Inner
 
 public mut class Outer
 {
-    public var inner: Inner;
+    public var inner: mut Inner;
 
     public new()
     {
