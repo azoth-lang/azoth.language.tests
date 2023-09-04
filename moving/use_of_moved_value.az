@@ -1,15 +1,15 @@
 public fn main()
 {
-    let book: iso Book = new Book();
+    let book: Book = Book();
     take(move book);
-    // TODO shouldn't this just make borrow an `id Book`?
+    // Since `Book` is a value type, moving it leaves an unusable value behind
     let borrow = book; // ERROR use of moved value
 }
 
-public mut class Book
+public mut move struct Book
 {
 }
 
-public fn take(book: iso Book)
+public fn take(book: Book)
 {
 }

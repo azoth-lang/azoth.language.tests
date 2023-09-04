@@ -1,0 +1,17 @@
+public fn main() -> bool
+{
+    let box1: iso = new IntBox();
+    let box2 = increment(move box1);
+    //return id box1 == id box2;
+}
+
+public mut class IntBox
+{
+    public var value: int;
+}
+
+public fn increment(box: iso IntBox) -> iso IntBox
+{
+    box.value += 1;
+    return box;
+}

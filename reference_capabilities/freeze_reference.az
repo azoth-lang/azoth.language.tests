@@ -4,6 +4,8 @@ public fn main()
     book.modify();
 
     let frozenBook: const = book;
+
+    book.modify(); // ERROR `const` due to flow typing
 }
 
 public iso class Book
