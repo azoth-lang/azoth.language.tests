@@ -1,0 +1,10 @@
+// compile: errors
+public fn main()
+{
+    // currently causes an infinite loop in the parser
+    //example(1 2);
+}
+
+public fn example(x: int, y: int)
+{
+}

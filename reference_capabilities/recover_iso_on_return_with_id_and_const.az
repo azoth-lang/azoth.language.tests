@@ -1,0 +1,25 @@
+// exit code: 1
+
+public fn main() -> byte
+{
+    let e1: iso = new Example();
+    let other: const = new Example();
+    let e2 = transform(move e1, other, other);
+    if id e1 == id e2 => return 1
+    else => return 0;
+}
+
+public mut class Example
+{
+    public var value: byte;
+    public var other: const Example?;
+    public var tag: id Example?;
+}
+
+public fn transform(e: iso Example, other: const Example?, tag: id Example?) -> iso Example
+{
+    e.value += 1;
+    e.other = other;
+    e.tag = tag;
+    return e;
+}
