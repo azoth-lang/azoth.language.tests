@@ -10,6 +10,5 @@ public fn main() -> byte
     var i3 = o as int;
     var u1 = b as uint;
     var u2 = s as uint;
-    var u3 = o as uint;
-    return (i1 * i2 * i3 == u1 * u2 * u3) as byte;
+    return (i1 * i2 * i3 == u1 * u2 * o) as byte;
 }
