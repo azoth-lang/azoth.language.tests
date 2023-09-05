@@ -1,0 +1,7 @@
+// exit code: 2
+public fn main() -> byte
+{
+    var t = true as byte;
+    var f = false as byte;
+    return t * 2 + f;
+}
