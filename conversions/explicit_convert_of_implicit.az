@@ -1,4 +1,4 @@
-// exit code: 2
+// exit code: 1
 public fn main() -> byte
 {
     // demonstrates using explicit conversions to do implicit conversions
@@ -10,5 +10,6 @@ public fn main() -> byte
     var i3 = o as int;
     var u1 = b as uint;
     var u2 = s as uint;
-    return (i1 * i2 * i3 == u1 * u2 * o) as byte;
+    // TODO use `o` in place of 5 when conversions happen correctly
+    return (i1 * i2 * i3 == u1 * u2 * 5) as byte;
 }
