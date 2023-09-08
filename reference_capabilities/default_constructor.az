@@ -8,10 +8,9 @@ public fn main()
     // TODO sealed not yet implemented
     // let sc: iso SealedConst = new SealedConst(); // ERROR constructor returns const
     // TODO subclassing not yet implemented
-    // let is: iso IsoSubclass = new IsoSubclass();
+    // let is: iso MutSubclass = new MutSubclass();
     let r: iso ReadOnly = new ReadOnly();
     let m: iso Mut = new Mut();
-    let i: iso Iso = new Iso();
 }
 
 public const class Const
@@ -24,7 +23,7 @@ public const class Const
 }*/
 
 // TODO subclassing not yet implemented
-/*public mut class IsoSubclass : Const
+/*public mut class MutSubclass : Const
 {
 }*/
 
@@ -33,9 +32,5 @@ public /* readonly */ class ReadOnly
 }
 
 public mut class Mut
-{
-}
-
-public iso class Iso
 {
 }
