@@ -1,0 +1,21 @@
+public fn main()
+{
+    let a: iso Book; // ERROR cannot declare `iso` of constant class
+    let b: mut Book; // ERROR cannot declare `mut` of constant class
+    let c: Book;
+    let d: const Book;
+    let e: id Book;
+}
+
+public fn example(
+    a: iso Book, // ERROR cannot declare `iso` of constant class
+    b: mut Book, // ERROR cannot declare `mut` of constant class
+    c: Book,
+    d: const Book,
+    e: id Book)
+{
+}
+
+public const class Book
+{
+}

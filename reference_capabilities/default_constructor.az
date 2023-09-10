@@ -2,8 +2,8 @@
 
 public fn main()
 {
-    let c1: iso Const = new Const(); // ERROR returns const
-    let c2: const Const = new Const(); // ERROR returns const
+    let c1: iso Const = new Const(); // ERROR x2 returns const, can't declare `iso Const`
+    let c2: const Const = new Const();
     let m: iso Mut = new Mut();
 }
 
