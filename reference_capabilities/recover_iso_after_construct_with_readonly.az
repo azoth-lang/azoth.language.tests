@@ -8,7 +8,7 @@ public fn example(author: Author)
 {
     let book: iso = new Book(author); // ERROR cannot recover `iso` because it shares `author`
 
-    take(move book);
+    take(move book); // ERROR can't move because it is shared
 }
 
 public class Book
