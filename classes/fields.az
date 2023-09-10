@@ -1,6 +1,6 @@
 // exit code: 42
 
-public mut class Inner
+public class Inner
 {
     public var value: byte;
 
@@ -10,7 +10,7 @@ public mut class Inner
     }
 }
 
-public mut class Outer
+public class Outer
 {
     public var inner: mut Inner;
 

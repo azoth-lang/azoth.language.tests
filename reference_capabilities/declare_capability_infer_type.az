@@ -24,7 +24,7 @@ public fn main()
     book5.modify();
 }
 
-public mut class Book
+public class Book
 {
     public fn modify(mut self) { }
 }

@@ -6,7 +6,7 @@ public fn main()
     take(move borrow); // ERROR can't move from a share
 }
 
-public mut class Book
+public class Book
 {
 }
 

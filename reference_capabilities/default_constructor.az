@@ -17,20 +17,11 @@ public const class Const
 {
 }
 
-// TODO sealed not yet implemented
-/*public sealed const class SealedConst
-{
-}*/
-
-// TODO subclassing not yet implemented
-/*public mut class MutSubclass : Const
-{
-}*/
 
 public /* readonly */ class ReadOnly
 {
 }
 
-public mut class Mut
+public class Mut
 {
 }

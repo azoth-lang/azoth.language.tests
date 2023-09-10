@@ -4,6 +4,6 @@ public fn main()
 }
 
 
-public mut class Test
+public class Test
 {
 }

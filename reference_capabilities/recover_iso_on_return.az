@@ -8,7 +8,7 @@ public fn main() -> byte
     else => return 0;
 }
 
-public mut class IntBox
+public class IntBox
 {
     public var value: int;
 }

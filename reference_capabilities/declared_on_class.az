@@ -2,11 +2,7 @@ public const class Const
 {
 }
 
-public /* readonly */ class ReadOnly
-{
-}
-
-public mut class Mut
+public mut class Mut // ERROR not allowed on class
 {
 }
 
@@ -14,6 +10,6 @@ public iso class Iso // ERROR not allowed on class
 {
 }
 
-public id class Id // ERROR not allowed to modify a class
+public id class Id // ERROR not allowed on class
 {
 }

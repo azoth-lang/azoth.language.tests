@@ -1,4 +1,4 @@
-public mut class Test
+public class Test
 {
     public fn read(self) { }
     public fn mutate(mut self) { }

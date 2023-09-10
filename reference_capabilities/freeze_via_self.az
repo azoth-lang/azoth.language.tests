@@ -4,7 +4,7 @@ public fn main()
     book.\freeze();
 }
 
-public mut class Book
+public class Book
 {
     public fn \freeze(const self)
     {

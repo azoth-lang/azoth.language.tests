@@ -4,7 +4,7 @@ public fn main()
     book.take();
 }
 
-public mut class Book
+public class Book
 {
     public fn take(iso self)
     {

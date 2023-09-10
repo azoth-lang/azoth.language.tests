@@ -9,7 +9,7 @@ public fn main() -> byte
     else => return 0;
 }
 
-public mut class Example
+public class Example
 {
     public var value: byte;
     public var other: const Example?;

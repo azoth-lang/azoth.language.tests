@@ -6,7 +6,7 @@ public fn main() -> byte
     return b.value;
 }
 
-public mut class ByteBox
+public class ByteBox
 {
     public var value: byte;
 }

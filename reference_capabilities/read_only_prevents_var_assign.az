@@ -1,4 +1,4 @@
-public mut class Book
+public class Book
 {
     var pages: int;
 

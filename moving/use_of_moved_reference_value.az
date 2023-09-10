@@ -7,7 +7,7 @@ public fn main()
     identify(book);
 }
 
-public mut class Book
+public class Book
 {
 }
 

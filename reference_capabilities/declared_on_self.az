@@ -1,4 +1,4 @@
-public mut class Book
+public class Book
 {
     // `iso self` allows a consuming pattern
     public fn isolated(iso self) { }
