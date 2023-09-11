@@ -1,0 +1,4 @@
+public fn main() -> void
+{
+    let empty = new Raw_Bounded_List[int](0);
+}
