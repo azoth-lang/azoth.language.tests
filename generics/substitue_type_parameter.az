@@ -1,0 +1,13 @@
+public fn main()
+{
+    let test = new Test[int]();
+    let i: int = test.test(42);
+}
+
+public class Test[T]
+{
+    public fn test(self, t: T) -> T
+    {
+        return t;
+    }
+}
