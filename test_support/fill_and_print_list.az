@@ -1,0 +1,15 @@
+// stdout file: fill_and_print_list.txt
+
+public fn main(output: mut TestOutput) -> void
+{
+    let items: mut = new List[int]();
+    foreach i: int in 1..100
+    {
+        items.add(i);
+    }
+
+    foreach i: int in 1..100
+    {
+        output.write_line(i.to_display_string());
+    }
+}
