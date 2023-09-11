@@ -1,0 +1,7 @@
+public fn main() -> void
+{
+}
+
+public fn test(list: Raw_Bounded_List[int])
+{
+}
