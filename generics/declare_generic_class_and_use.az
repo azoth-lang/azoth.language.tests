@@ -1,0 +1,8 @@
+public fn main() -> void
+{
+    let t: Test[int] = new Test[int]();
+}
+
+public class Test[T]
+{
+}
