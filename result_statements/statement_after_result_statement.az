@@ -1,0 +1,12 @@
+// exit code: 42
+
+public fn main() -> byte
+{
+    return
+    {
+        let result: byte = 42;
+        => result;
+        let result: byte = 45; // ERROR statement after result
+        => result; // ERROR statement after result
+    };
+}

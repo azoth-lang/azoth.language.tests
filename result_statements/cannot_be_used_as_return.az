@@ -1,0 +1,7 @@
+// exit code: 42
+
+public fn main() -> byte
+{
+    => 0; // ERROR cannot use in place of return
+    return 42;
+}
