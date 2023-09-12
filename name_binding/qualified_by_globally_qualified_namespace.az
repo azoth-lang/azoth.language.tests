@@ -1,0 +1,18 @@
+// exit code: 42
+
+namespace nested
+{
+    namespace ::.not_nested
+    {
+        public fn function() -> byte
+        {
+            return 42;
+        }
+    }
+}
+
+public fn main() -> byte
+{
+    not_nested.function();
+    nested.not_nested.function(); // ERROR not the proper qualifiers
+}
