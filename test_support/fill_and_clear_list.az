@@ -1,0 +1,14 @@
+// exit code: 1
+
+public fn main(output: mut TestOutput) -> byte
+{
+    let items: mut = new List[int]();
+    foreach i: int in 1..100
+    {
+        items.add(i);
+    }
+
+    items.clear();
+
+    return (items.count() == 0) as byte;
+}
