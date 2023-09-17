@@ -1,0 +1,20 @@
+// exit code: 42
+
+public abstract class Abstract
+{
+    public abstract fn method(self) -> byte;
+}
+
+public class Concrete: Abstract
+{
+    public /*override*/ fn method(self) -> byte
+    {
+        return 42;
+    }
+}
+
+public fn main() -> byte
+{
+    let a: Abstract = new Concrete();
+    return a.method();
+}
