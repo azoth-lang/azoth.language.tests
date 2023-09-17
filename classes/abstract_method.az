@@ -1,0 +1,11 @@
+public abstract class Abstract
+{
+    public abstract fn method(self);
+}
+
+public class Concrete
+{
+    public abstract fn method(self); // ERROR abstract method in concrete class
+}
+
+public fn main() { }
