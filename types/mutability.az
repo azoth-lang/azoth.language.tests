@@ -7,20 +7,19 @@ public fn main()
     let m: iso Test = new Test();
     let i: const Test = new Test();
 
-    mutable_lent(mut m);
-    mutable_lent(m); // ERROR must explicitly pass mutable
+    mutable_alias(m);
 
-    read_only_lent(i);
-    read_only_lent(mut i); // ERROR can't use immutable value mutably
+    read_only_alias(i);
+    mutable_alias(i); // ERROR can't use immutable value mutably
 
     take(move m);
 }
 
-public fn mutable_lent(t: mut Test)
+public fn mutable_alias(t: mut Test)
 {
 }
 
-public fn read_only_lent(t: Test)
+public fn read_only_alias(t: Test)
 {
 }
 
