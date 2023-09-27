@@ -17,9 +17,20 @@ public fn main()
     let reader3: const = move book3;
     book3.modify(); // ERROR cannot mutate through `id` reference.
     reader3.modify(); // ERROR cannot mutate an immutable object.
+
+    let c1 = new Const();
+    is_const(c1);
 }
 
 public class Book
 {
     public fn modify(mut self) { }
+}
+
+public const class Const
+{
+}
+
+public fn is_const(c: const Const)
+{
 }
