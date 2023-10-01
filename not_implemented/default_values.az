@@ -6,7 +6,7 @@ public class Test
 {
     let field: int;
 
-    public new(.field = -1) // ERROR default values not implemented
+    public new(mut self, .field = -1) // ERROR default values not implemented
     {
     }
 

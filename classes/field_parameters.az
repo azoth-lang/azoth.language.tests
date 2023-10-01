@@ -4,7 +4,7 @@ public class Book
 {
     public let page_count: byte;
 
-    public new(.page_count) { }
+    public new(mut self, .page_count) { }
 }
 
 public fn main() -> byte

@@ -15,7 +15,7 @@ public class Book
 {
     public let author: Author;
 
-    public new(.author) { }
+    public new(mut self, .author) { }
 }
 
 public const class Author

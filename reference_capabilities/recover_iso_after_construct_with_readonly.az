@@ -16,7 +16,7 @@ public class Book
     public let author: Author;
 
     // The inferred return type of this must be `mut Book`?
-    public new(.author) { }
+    public new(mut self, .author) { }
 }
 
 public class Author

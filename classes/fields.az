@@ -4,7 +4,7 @@ public class Inner
 {
     public var value: byte;
 
-    public new()
+    public new(mut self)
     {
         self.value = 1;
     }
@@ -14,7 +14,7 @@ public class Outer
 {
     public var inner: mut Inner;
 
-    public new()
+    public new(mut self)
     {
         self.inner = new Inner();
     }
