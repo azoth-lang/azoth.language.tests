@@ -1,0 +1,31 @@
+public class Book
+{
+    public let page_count: int;
+    public var copies_sold: int;
+
+    public new(mut self, page_count: int)
+    {
+        // Even though the binding is immutable, this is the constructor and it hasn't been assigned yet
+        .page_count = page_count;
+        .copies_sold = 0;
+    }
+
+    public fn sell(mut self, copies: int)
+    {
+        .copies_sold += copies;
+    }
+
+    public fn add_pages(mut self, pages: int)
+    {
+        .page_count += pages; // ERROR binding is immutable
+    }
+}
+
+public fn main()
+{
+    let book: mut = new Book(42);
+    book.sell(42);
+    book.copies_sold += 43;
+    book.add_pages(44);
+    book.page_count += 45; // ERROR binding is immutable
+}
