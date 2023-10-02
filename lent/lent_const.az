@@ -1,0 +1,33 @@
+public fn main()
+{
+    let book: mut = new Book(new Author());
+    {
+        let reader = book.read();
+        book.author = new Author(); // ERROR `book` has been lent as const
+    }
+    book.author = new Author();
+}
+
+public class Book
+{
+    public var author: Author;
+
+    // The inferred return type of this must be `mut Book`?
+    public new(mut self, .author) { }
+
+    public fn read(lent const self) -> lent mut Reader
+    {
+        return new Reader(self);
+    }
+}
+
+public class Author
+{
+}
+
+public class Reader
+{
+    public let book: const Book;
+
+    public new(mut self, .book) { }
+}
