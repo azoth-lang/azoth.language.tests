@@ -1,0 +1,14 @@
+public fn main()
+{
+    example(new Book());
+}
+
+public fn example(lent b: id Book) // ERROR cannot lend `id`
+    -> lent id Book // ERROR cannot lend `id`
+{
+    return b;
+}
+
+public class Book
+{
+}
