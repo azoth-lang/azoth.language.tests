@@ -3,6 +3,6 @@
 public fn main() -> byte
 {
     let a: uint8 = 42; // ERROR should be `byte`
-    let s: string = a; // ERROR cannot convert to string (shows type is not unknown)
+    let s: String = a; // ERROR cannot convert to String (shows type is not unknown)
     return a; // valid showing it converts
 }
