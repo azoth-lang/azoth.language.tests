@@ -3,23 +3,23 @@
 public fn main(output: mut TestOutput) -> byte
 {
     let items: mut = new Raw_Bounded_List[byte](10);
-    if items.capacity() =/= 10 => ABORT("Incorrect capacity");
+    if items.get_capacity() =/= 10 => ABORT("Incorrect capacity");
     items.add(0);
     items.add(1);
     items.add(2);
     items.add(3);
-    if items.count() =/= 4 => ABORT("Incorrect count, expected 4");
+    if items.get_count() =/= 4 => ABORT("Incorrect count, expected 4");
     if items.at(3) =/= 3 => ABORT("Incorrect item at index 3, expected 3");
 
-    items.\set(1, 42);
+    items.set_at(1, 42);
 
     items.shrink(3);
-    if items.count() =/= 3 => ABORT("Incorrect count, expected 3");
+    if items.get_count() =/= 3 => ABORT("Incorrect count, expected 3");
 
     let sum = items.at(0) + items.at(1) + items.at(2);
 
     items.shrink(0);
-    if items.count() =/= 0 => ABORT("Incorrect count, expected 0");
+    if items.get_count() =/= 0 => ABORT("Incorrect count, expected 0");
 
     return sum;
 }
