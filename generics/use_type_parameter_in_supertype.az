@@ -1,0 +1,14 @@
+public fn main() -> void
+{
+}
+
+public class Test[T] <: Trait[T]
+{
+    public fn test(t: T)
+    {
+    }
+}
+
+public trait Trait[T]
+{
+}
