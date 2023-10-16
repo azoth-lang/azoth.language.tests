@@ -1,0 +1,12 @@
+public fn main() -> byte
+{
+}
+
+public class ExampleClass: ExampleTrait // ERROR cannot use trait as base class
+{
+}
+
+// Declare after subclass to force out of order evaluation
+public trait ExampleTrait
+{
+}

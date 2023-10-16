@@ -2,4 +2,7 @@ public abstract class Test
 {
 }
 
-public fn main() { }
+public fn main()
+{
+    let x = new Test(); // ERROR cannot construct abstract class
+}
