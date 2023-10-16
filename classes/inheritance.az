@@ -1,8 +1,9 @@
-public abstract class Abstract
+public class Concrete: Abstract
 {
 }
 
-public class Concrete: Abstract
+// Declare after subclass to force out of order evaluation
+public abstract class Abstract
 {
 }
 

@@ -1,0 +1,21 @@
+// exit code: 42
+
+public fn main() -> byte
+{
+    let example = new ExampleClass();
+    return example.get_value();
+}
+
+public class ExampleClass <: ExampleTrait
+{
+    public fn get_value(self) -> byte
+    {
+        return 42;
+    }
+}
+
+// Declare after subclass to force out of order evaluation
+public trait ExampleTrait
+{
+    public fn get_value(self) -> byte;
+}

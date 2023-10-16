@@ -2,7 +2,6 @@ public fn main()
 {
 }
 
-public trait Biography
+public trait Trait
 {
-
 }
