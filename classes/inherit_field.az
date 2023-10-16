@@ -1,0 +1,22 @@
+// exit code: 42
+
+public class Concrete: Abstract
+{
+}
+
+// Declare after subclass to force out of order evaluation
+public abstract class Abstract
+{
+    public let value: byte;
+
+    public new(mut self)
+    {
+        .value = 42;
+    }
+}
+
+public fn main() -> byte
+{
+    let c = new Concrete();
+    return c.value;
+}
