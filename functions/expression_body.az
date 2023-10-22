@@ -1,0 +1,4 @@
+// exit code: 42
+
+public fn main() -> byte
+    => 42;
