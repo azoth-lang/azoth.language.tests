@@ -2,6 +2,6 @@ public fn main() -> void
 {
 }
 
-public fn test(list: Raw_Bounded_List[int])
+public fn test(list: Raw_Hybrid_Bounded_List[int, int])
 {
 }

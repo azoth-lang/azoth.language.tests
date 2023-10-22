@@ -2,7 +2,7 @@
 
 public fn main(output: mut TestOutput) -> byte
 {
-    let items: mut = new Raw_Bounded_List[int](10);
+    let items: mut = new Raw_Hybrid_Bounded_List[void, byte](10);
     if items.get_capacity() =/= 10 => ABORT("Incorrect capacity");
     items.add(0);
     items.add(1);
@@ -16,7 +16,7 @@ public fn main(output: mut TestOutput) -> byte
     items.shrink(3);
     if items.get_count() =/= 3 => ABORT("Incorrect count, expected 3");
 
-    let sum = (items.at(0) + items.at(1) + items.at(2)) as! byte;
+    let sum = items.at(0) + items.at(1) + items.at(2);
 
     items.shrink(0);
     if items.get_count() =/= 0 => ABORT("Incorrect count, expected 0");
