@@ -1,0 +1,11 @@
+// exit code: 42
+
+// Unix platforms really only support byte error codes
+public fn main() -> byte
+{
+    let x: byte? = 42;
+
+    if x is let x? => return x;
+
+    return 0;
+}
