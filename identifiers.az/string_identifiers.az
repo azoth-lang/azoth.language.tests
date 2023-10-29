@@ -1,0 +1,9 @@
+// exit code: 42
+
+public fn main() -> byte
+{
+    let \"let": byte = 14;
+    let \"x": byte = 14;
+    let \"14\tis cool": byte = 14;
+    return \let + x + \"14\tis cool";
+}
