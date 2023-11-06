@@ -1,0 +1,17 @@
+public fn main()
+{
+    let book: iso Book = new Book();
+    book.take();
+}
+
+public class Book
+{
+    public fn take(iso self)
+    {
+        publish(freeze self);
+    }
+}
+
+public fn publish(book: const Book)
+{
+}

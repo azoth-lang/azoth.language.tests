@@ -1,0 +1,17 @@
+public fn main()
+{
+    let book: iso Book = new Book();
+    book.take();
+}
+
+public class Book
+{
+    public fn take(iso self)
+    {
+        take(move self);
+    }
+}
+
+public fn take(book: iso Book)
+{
+}

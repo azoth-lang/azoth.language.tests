@@ -1,0 +1,12 @@
+public fn main()
+{
+    let book: Book = new Book();
+    book.publish();
+}
+
+public class Book
+{
+    public fn publish(const self)
+    {
+    }
+}
