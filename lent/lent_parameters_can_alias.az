@@ -1,0 +1,20 @@
+// exit code: 42
+
+public fn lent_change(lent b1: mut ByteBox, lent b2: mut ByteBox) -> byte
+{
+    b1.value = 42;
+    return b2.value;
+}
+
+public fn main() -> byte
+{
+    let b: iso = new ByteBox(1);
+    return lent_change(b, b);
+}
+
+public class ByteBox
+{
+    public var value: byte;
+
+    public new(mut self, .value) { }
+}

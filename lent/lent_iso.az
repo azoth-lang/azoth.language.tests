@@ -17,6 +17,7 @@ public class Book
 
     public fn edit(lent iso self) -> lent mut Editor
     {
+        // Shows one can move a `lent iso` parameter
         return new Editor(move self);
     }
 }
