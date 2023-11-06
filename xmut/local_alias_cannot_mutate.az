@@ -1,0 +1,11 @@
+public fn main()
+{
+    var b: xmut = new Book();
+
+    var b2: xmut = b; // ERROR cannot assign `xmut Book` from `Book`
+}
+
+public class Book
+{
+    var pages: int;
+}
