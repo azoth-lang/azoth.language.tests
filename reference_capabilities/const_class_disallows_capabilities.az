@@ -2,7 +2,6 @@ public fn main()
 {
     let a: iso Book; // ERROR cannot declare `iso` of constant class
     let b: mut Book; // ERROR cannot declare `mut` of constant class
-    let c: xmut Book; // ERROR cannot declare `xmut` of constant class
     let d: Book;
     let e: const Book;
     let f: id Book;
@@ -11,7 +10,6 @@ public fn main()
 public fn example(
     a: iso Book, // ERROR cannot declare `iso` of constant class
     b: mut Book, // ERROR cannot declare `mut` of constant class
-    c: xmut Book, // ERROR cannot declare `xmut` of constant class
     d: Book,
     e: const Book,
     f: id Book)
