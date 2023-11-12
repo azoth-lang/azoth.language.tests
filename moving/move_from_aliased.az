@@ -1,20 +1,17 @@
 public fn main()
 {
     let book: iso Book = new Book();
-    book.take();
+    let borrow: Book = book;
+
+    take(move book); // ERROR can't recover isolation because aliased by `borrow`
     read(book); // ERROR is `id Book`
     identify(book);
+
+    read(borrow);
 }
 
 public class Book
 {
-    public fn take(iso self)
-    {
-        // Shows that one can move out of the `self` reference
-        take(move self);
-        read(self); // ERROR is `id Book`
-        identify(self);
-    }
 }
 
 public fn take(_: iso Book) { }

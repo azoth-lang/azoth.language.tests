@@ -2,6 +2,8 @@ public fn main()
 {
     let book: iso Book = new Book();
     book.take();
+    read(book); // ERROR is `id Book`
+    identify(book);
 }
 
 public class Book
@@ -10,3 +12,6 @@ public class Book
     {
     }
 }
+
+public fn read(_: Book) { }
+public fn identify(_: id Book) { }

@@ -7,10 +7,8 @@ public fn main()
 }
 
 // TODO struct not implemented
-public mut move struct Book
+public move struct Book
 {
 }
 
-public fn take(book: Book)
-{
-}
+public fn take(book: Book) { }

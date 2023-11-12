@@ -2,12 +2,12 @@ public fn main()
 {
     let book: iso Book = new Book();
     take(book); // ERROR need `move`
+    modify(book); // Type is still `mut Book`
 }
 
 public class Book
 {
 }
 
-public fn take(book: iso Book)
-{
-}
+public fn take(_: iso Book) { }
+public fn modify(_: mut Book) { }
