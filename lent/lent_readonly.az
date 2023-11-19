@@ -1,0 +1,35 @@
+// `lent` readonly isn't treated specially, it just means that the parameter is lent and readonly
+
+public fn main()
+{
+    let book: mut = new Book(new Author());
+    {
+        let reader = book.read();
+        book.author = new Author(); // Allowed because `book` is still mutable
+    }
+    book.author = new Author();
+}
+
+public class Book
+{
+    public var author: Author;
+
+    // The inferred return type of this is `mut Book`
+    public new(mut self, .author) { }
+
+    public fn read(lent self) -> lent Reader
+    {
+        return new Reader(self);
+    }
+}
+
+public class Author
+{
+}
+
+public class Reader
+{
+    public let book: Book;
+
+    public new(mut self, .book) { }
+}

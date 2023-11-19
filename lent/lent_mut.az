@@ -1,0 +1,35 @@
+// `lent mut` isn't treated specially, it just means that the parameter is lent and mutable
+
+public fn main()
+{
+    let book: mut = new Book(new Author());
+    {
+        let editor = book.edit();
+        book.author = new Author(); // Allowed because `book` is still mutable
+    }
+    book.author = new Author();
+}
+
+public class Book
+{
+    public var author: Author;
+
+    // The inferred return type of this is `mut Book`
+    public new(mut self, .author) { }
+
+    public fn edit(lent mut self) -> lent mut Editor
+    {
+        return new Editor(self);
+    }
+}
+
+public class Author
+{
+}
+
+public class Editor
+{
+    public let book: mut Book;
+
+    public new(mut self, .book) { }
+}
