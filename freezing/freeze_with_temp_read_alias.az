@@ -1,0 +1,18 @@
+public fn main()
+{
+    let book: mut Book = new Book();
+    book.modify();
+
+    test(book as Book, freeze book);
+
+    book.modify(); // ERROR `const` due to flow typing
+}
+
+public class Book
+{
+    public fn modify(mut self) {  }
+
+    public fn read(self) { }
+}
+
+public fn test(b1: Book, b2: const Book) { }
