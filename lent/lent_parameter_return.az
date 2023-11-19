@@ -1,0 +1,26 @@
+public fn author(lent book: mut Book) -> Author
+{
+    return book.author; // ERROR cannot share return with `lent` parameter
+}
+
+public fn lent_author(lent book: mut Book) -> lent Author
+{
+    return book.author;
+}
+
+public fn lent_return_author(book: mut Book) -> lent Author
+{
+    return book.author;
+}
+
+public class Book
+{
+    public var author: Author;
+
+    // The inferred return type of this is `mut Book`
+    public new(mut self, .author) { }
+}
+
+public class Author
+{
+}
