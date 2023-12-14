@@ -1,0 +1,10 @@
+public fn main()
+{
+    async
+    {
+        let _ = go example();
+        let _ = do example();
+    }
+}
+
+public fn example() { }
