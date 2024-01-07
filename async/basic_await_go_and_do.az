@@ -1,0 +1,13 @@
+// exit code: 42
+
+public fn main() -> byte
+{
+    async
+    {
+        let a = go example();
+        let b = do example();
+        return await a + await b;
+    }
+}
+
+public fn example() -> byte => 21;
