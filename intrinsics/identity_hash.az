@@ -1,0 +1,16 @@
+// exit code: 1
+public fn main(output: mut TestOutput) -> byte
+{
+    let a = new Example();
+    let b = new Example();
+
+    if identity_hash(a) =/= identity_hash(a)
+        => return 0;
+
+    if identity_hash(a) == identity_hash(b)
+        => return 0;
+
+    return 1;
+}
+
+public class Example { }
