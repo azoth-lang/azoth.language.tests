@@ -1,0 +1,7 @@
+public fn main() -> void
+{
+}
+
+public class Test[in T1, out T2]
+{
+}
