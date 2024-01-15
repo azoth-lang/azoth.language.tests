@@ -1,0 +1,14 @@
+public fn main()
+{
+}
+
+public class Test : Base[Test]
+{
+}
+
+public class Base[T]
+{
+    public fn test(t: T)
+    {
+    }
+}
