@@ -8,8 +8,8 @@ public fn main(output: mut TestOutput) -> void
         items.add(i);
     }
 
-    foreach i: size in 0..<100
+    foreach i/*: size*/ in 0..<100
     {
-        output.write_line(items.at(i).to_display_string());
+        output.write_line(items.at(i as! size).to_display_string());
     }
 }

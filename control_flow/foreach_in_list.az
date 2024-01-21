@@ -1,0 +1,17 @@
+// exit code: 42
+public fn main() -> byte
+{
+    let items: mut = new List[byte]();
+    items.add(4);
+    items.add(5);
+    items.add(12);
+    items.add(2);
+    items.add(19);
+
+    var t: byte = 0;
+    foreach v in items
+    {
+        t += v;
+    }
+    return t;
+}

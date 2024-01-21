@@ -4,12 +4,12 @@ public fn main()
     {
     }
 
-    let x: int;
+    let x: int = 42;
     foreach i: int in x // ERROR Foreach in non range expressions
     {
     }
 
-    let y: int;
+    let y: int = 42;
     foreach i: int in x+y // ERROR Foreach in non range expressions
     {
     }

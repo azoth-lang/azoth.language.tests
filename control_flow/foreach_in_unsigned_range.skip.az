@@ -1,0 +1,10 @@
+// exit code: 10
+public fn main() -> byte
+{
+    var t: byte = 0;
+    foreach i: uint in 0..9
+    {
+        t += 1;
+    }
+    return t;
+}

@@ -1,0 +1,10 @@
+// exit code: 12
+public fn main() -> byte
+{
+    var t: byte = 0;
+    foreach i: int in -2..9
+    {
+        t += 1;
+    }
+    return t;
+}

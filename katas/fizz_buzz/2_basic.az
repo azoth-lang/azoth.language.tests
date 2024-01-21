@@ -2,7 +2,7 @@
 
 public fn main(output: mut TestOutput)
 {
-    foreach n: uint in 1..100
+    foreach n/*: uint*/ in 1..100
     {
         let fizz = n.remainder(3) == 0;
         let buzz = n.remainder(5) == 0;
