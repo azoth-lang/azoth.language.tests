@@ -1,0 +1,11 @@
+// exit code: 42
+
+public fn main() -> byte
+{
+    return factory()();
+}
+
+public fn factory() -> () -> byte
+    => example;
+
+public fn example() -> byte => 42;
