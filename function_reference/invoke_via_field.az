@@ -1,0 +1,20 @@
+// exit code: 42
+
+public fn main() -> byte
+{
+    let t = new Test(example);
+
+    return t.call();
+}
+
+public fn example() -> byte => 42;
+
+public const class Test
+{
+    let func: () -> byte;
+
+    public new(self, .func) { }
+
+    public fn call(const self) -> byte
+        => .func();
+}
