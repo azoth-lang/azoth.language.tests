@@ -1,0 +1,10 @@
+// exit code: 42
+
+public fn main() -> byte
+{
+    let func: () -> byte = example;
+
+    return func();
+}
+
+public fn example() -> byte => 42;
