@@ -1,0 +1,33 @@
+// exit code: 2
+
+public fn main() -> byte
+{
+    let n: mut = new Number();
+    n.increment();
+    var b = new Box[mut Number](n);
+    b.value().increment();
+    return n.value();
+}
+
+public const class Box[T]
+{
+    let v: T;
+
+    public new(self, .v) { }
+
+    public fn value(const self) -> T => .v;
+}
+
+public class Number
+{
+    var v: byte;
+
+    public new(mut self)
+    {
+        .v = 0;
+    }
+
+    public fn increment(mut self) { .v += 1; }
+
+    public fn value(self) -> byte => .v;
+}
