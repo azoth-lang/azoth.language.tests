@@ -11,11 +11,13 @@ public fn main() -> byte
 
 public const class Box[T]
 {
-    let v: const T;
+    let v: const T; // ERROR can't apply capability to type parameter
 
     public new(self, .v) { }
 
-    public fn value(const self) -> const T => .v;
+    public fn value(const self)
+        -> const T // ERROR can't apply capability to type parameter
+        => .v;
 }
 
 public class Number
