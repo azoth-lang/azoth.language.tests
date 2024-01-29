@@ -1,0 +1,9 @@
+public class Book
+{
+    var pages: int;
+
+    public fn example(const self)
+    {
+        self.pages = 100; // ERROR cannot assign to const
+    }
+}

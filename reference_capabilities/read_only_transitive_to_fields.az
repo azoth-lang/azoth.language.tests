@@ -1,0 +1,18 @@
+public class Book
+{
+    let author: mut Author;
+
+    public new(mut self, .author) { }
+
+    public fn example(self)
+    {
+        .author.books_written = 100; // ERROR cannot assign to read only
+        let mut_author: mut Author = .author; // ERROR
+        let read_author: Author = .author;
+    }
+}
+
+public class Author
+{
+    public var books_written: int;
+}
