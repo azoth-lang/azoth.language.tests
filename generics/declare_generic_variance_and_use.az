@@ -5,9 +5,7 @@ public fn main() -> void
 
 public class Test[in TIn, out TOut]
 {
-    // public fn test(self, value: TIn) -> TOut
 }
-
 
 public class A { }
 public class B <: A { }
