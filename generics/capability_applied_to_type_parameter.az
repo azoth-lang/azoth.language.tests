@@ -1,35 +1,12 @@
-// exit code: 2
-
-public fn main() -> byte
-{
-    let n: mut = new Number();
-    n.increment();
-    var b = new Box[mut Number](n);
-    b.value().increment();
-    return n.value();
-}
-
 public const class Box[T]
 {
     let v: const T; // ERROR can't apply capability to type parameter
 
     public new(self, .v) { }
 
-    public fn value(const self)
-        -> const T // ERROR can't apply capability to type parameter
-        => .v;
-}
-
-public class Number
-{
-    var v: byte;
-
-    public new(mut self)
+    public fn value(const self) -> const▷T
     {
-        .v = 0;
+        let temp: const T; // ERROR can't apply capability to type parameter
+        return .v;
     }
-
-    public fn increment(mut self) { .v += 1; }
-
-    public fn value(self) -> byte => .v;
 }

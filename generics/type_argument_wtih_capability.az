@@ -4,18 +4,23 @@ public fn main() -> byte
 {
     let n: mut = new Number();
     n.increment();
-    var b = new Box[mut Number](n);
-    b.value().increment();
+    let b: mut = new Box[mut Number](n);
+    b.mut_value().increment();
+
+    if id n =/= id b.read_value() => return 0;
+
     return n.value();
 }
 
-public const class Box[T]
+public class Box[T]
 {
     let v: T;
 
-    public new(self, .v) { }
+    public new(mut self, .v) { }
 
-    public fn value(const self) -> T => .v;
+    public fn mut_value(mut self) -> self▷T => .v;
+
+    public fn read_value(self) -> self▷T => .v;
 }
 
 public class Number

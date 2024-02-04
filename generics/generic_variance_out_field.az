@@ -26,9 +26,9 @@ public class Strange_Pair[out T]
 
     public new(mut self, .first, .second) { }
 
-    public fn get_first(self) -> T => .first;
+    public fn get_first(self) -> self▷T => .first;
 
-    public fn get_second(self) -> T => .second;
+    public fn get_second(self) -> self▷T => .second;
 
     public fn swap(mut self)
     {
