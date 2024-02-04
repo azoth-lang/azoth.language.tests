@@ -6,7 +6,7 @@ public const class Box[T]
 
     public fn value(const self) -> const▷T
     {
-        let temp: const T; // ERROR can't apply capability to type parameter
+        let t: const T; // ERROR can't apply capability to type parameter
         return .v;
     }
 }
