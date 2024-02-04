@@ -2,8 +2,8 @@ public fn main()
 {
     let book: mut = new Book(new Author());
     {
-        let editor = book.edit();
-        book.author = new Author(); // ERROR `book` has been lent as iso
+        let reader = book.read();
+        book.author = new Author(); // ERROR `book` is `temp const`
     }
     book.author = new Author();
 }
@@ -15,10 +15,9 @@ public class Book
     // The inferred return type of this is `mut Book`
     public new(mut self, .author) { }
 
-    public fn edit(lent iso self) -> lent mut Editor
+    public fn read(temp const self) -> mut Reader
     {
-        // Shows one can move a `lent iso` parameter
-        return new Editor(move self);
+        return new Reader(self);
     }
 }
 
@@ -26,9 +25,9 @@ public class Author
 {
 }
 
-public class Editor
+public class Reader
 {
-    public let book: iso Book;
+    public let book: temp const Book;
 
     public new(mut self, .book) { }
 }
