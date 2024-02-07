@@ -1,0 +1,82 @@
+public fn main()
+{
+    let v1: mut = new Value(42);
+    let box: mut = new Box[mut Value](v1);
+    let read_box: Box[mut Value] = box;
+
+    // Viewpoint allows assignment through mutable box
+    box.get_contents().value = 20;
+
+    // But viewpoint doesn't allow assignment through readonly box
+    read_box.get_contents().value = 21; // ERROR cannot assign into field of read only
+
+    // Consumer uses Box[T] and Value
+    let consumer: mut = new Consumer();
+    // `mut Consumer` is fully mutable
+    consumer.change_value(22);
+    consumer.change_contents(new Value(23));
+    consumer.change_box(box);
+
+    let read_consumer: Consumer = consumer;
+    let consumer_box: Box[mut Value] = read_consumer.read_box();
+    consumer_box.force_get_mut_contents().value = 64;
+}
+
+public class Value
+{
+    public var value: int;
+
+    public new(mut self, .value) { }
+}
+
+public class Box[T]
+{
+    var value: T;
+
+    public new(mut self, .value) { }
+
+    public fn get_contents(readable self) -> self▷T => .value;
+
+    public fn force_get_mut_contents(readable self) -> mut▷T
+        => .value; // ERROR cannot convert
+
+    public fn set_contents(mut self, value: T)
+    {
+        .value = value;
+    }
+}
+
+public class Consumer
+{
+    var box: mut Box[mut Value];
+
+    public new(mut self)
+    {
+        .box = new Box[mut Value](new Value(42));
+    }
+
+    public fn change_value(mut self, value: int)
+    {
+        .box.get_contents().value = value;
+    }
+
+    public fn change_contents(mut self, contents: mut Value)
+    {
+        .box.set_contents(contents);
+    }
+
+    public fn change_box(mut self, box: mut Box[mut Value])
+    {
+        .box = box;
+    }
+
+    public fn get_contents(self) -> Value
+    {
+        return .box.get_contents();
+    }
+
+    public fn read_box(self) -> Box[mut Value]
+    {
+        return .box;
+    }
+}
