@@ -1,16 +1,11 @@
-public fn author(lent book: mut Book) -> Author
+public fn book_author(book: mut Book) -> Author
+{
+    return book.author;
+}
+
+public fn lent_book_author(lent book: mut Book) -> Author
 {
     return book.author; // ERROR cannot share return with `lent` parameter
-}
-
-public fn lent_author(lent book: mut Book) -> lent Author
-{
-    return book.author;
-}
-
-public fn lent_return_author(book: mut Book) -> lent Author
-{
-    return book.author;
 }
 
 public class Book

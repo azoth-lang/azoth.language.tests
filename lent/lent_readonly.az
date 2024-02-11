@@ -17,9 +17,9 @@ public class Book
     // The inferred return type of this is `mut Book`
     public new(mut self, .author) { }
 
-    public fn read(lent self) -> lent Reader
+    public fn read(lent self) -> Reader
     {
-        return new Reader(self);
+        return new Reader();
     }
 }
 
@@ -29,7 +29,5 @@ public class Author
 
 public class Reader
 {
-    public let book: Book;
-
-    public new(mut self, .book) { }
+    public new(mut self) { }
 }
