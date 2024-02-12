@@ -1,16 +1,14 @@
 public fn main()
 {
     let book: mut Book = new Book();
-    book.modify();
+    book.test_modify();
 
     test(book, freeze book); // ERROR cannot freeze book
 }
 
 public class Book
 {
-    public fn modify(mut self) {  }
-
-    public fn read(self) { }
+    public fn test_modify(mut self) {  }
 }
 
 public fn test(b1: mut Book, b2: const Book) { }

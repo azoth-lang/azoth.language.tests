@@ -6,19 +6,19 @@ public fn test(
     identity: id Book)
 {
     take(move isolated);
-    read(isolated); // ERROR is `id Book`
+    read_book(isolated); // ERROR is `id Book`
     identify(isolated);
 
     take(move mutable); // ERROR cannot recover isolation
-    read(mutable); // ERROR is `id Book`
+    read_book(mutable); // ERROR is `id Book`
     identify(mutable);
 
     take(move readonly); // ERROR cannot recover isolation
-    read(readonly); // ERROR is `id Book`
+    read_book(readonly); // ERROR is `id Book`
     identify(readonly);
 
     take(move constant); // ERROR cannot move from `const`
-    read(constant); // Allowed because still `const Book` because `const` doesn't participate in flow typing
+    read_book(constant); // Allowed because still `const Book` because `const` doesn't participate in flow typing
     identify(constant);
 
     take(move identity); // ERROR cannot move from `id`
@@ -38,5 +38,5 @@ public class Book
 }
 
 public fn take(_: iso Book) { }
-public fn read(_: Book) { }
+public fn read_book(_: Book) { }
 public fn identify(_: id Book) { }

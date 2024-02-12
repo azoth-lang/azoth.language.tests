@@ -4,7 +4,7 @@ public fn main()
 {
     let book: mut = new Book(new Author());
     {
-        let reader = book.read();
+        let reader = book.test_read();
         book.author = new Author(); // Allowed because `book` is still mutable
     }
     book.author = new Author();
@@ -17,7 +17,7 @@ public class Book
     // The inferred return type of this is `mut Book`
     public new(mut self, .author) { }
 
-    public fn read(lent self) -> Reader
+    public fn test_read(lent self) -> Reader
     {
         return new Reader();
     }

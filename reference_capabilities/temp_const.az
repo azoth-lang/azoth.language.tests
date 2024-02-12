@@ -2,7 +2,7 @@ public fn main()
 {
     let book: mut = new Book(new Author());
     {
-        let reader = book.read();
+        let reader = book.read_book();
         book.author = new Author(); // ERROR `book` is `temp const`
     }
     book.author = new Author();
@@ -15,7 +15,7 @@ public class Book
     // The inferred return type of this is `mut Book`
     public new(mut self, .author) { }
 
-    public fn read(temp const self) -> mut Reader
+    public fn read_book(temp const self) -> mut Reader
     {
         return new Reader(self);
     }

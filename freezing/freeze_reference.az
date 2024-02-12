@@ -1,14 +1,14 @@
 public fn main()
 {
     let book: mut Book = new Book();
-    book.modify();
+    book.test_modify();
 
     let frozenBook: const = freeze book;
 
-    book.modify(); // ERROR `const` due to flow typing
+    book.test_modify(); // ERROR `const` due to flow typing
 }
 
 public class Book
 {
-    public fn modify(mut self) {  }
+    public fn test_modify(mut self) {  }
 }
