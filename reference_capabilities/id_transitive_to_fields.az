@@ -1,0 +1,23 @@
+public class Book
+{
+    let first_author: const Author;
+    var second_author: const Author;
+    let third_author: mut Author;
+
+    public new(mut self, .first_author, .second_author, .third_author) { }
+
+    public fn example(id self)
+    {
+        // Can read `let : const`
+        let first_author: const Author = .first_author;
+        let second_author: const Author = .second_author; // ERROR cannot read var
+        .second_author = new Author(); // ERROR cannot access `var` field from `id`
+        let third_author: const Author = .third_author; // ERROR cannot read `mut`
+        let third_author_id: id Author = .third_author;
+    }
+}
+
+public class Author
+{
+    public var books_written: int;
+}
