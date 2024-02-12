@@ -4,10 +4,10 @@ public fn main(output: mut TestOutput) -> byte
     let a = new Example();
     let b = new Example();
 
-    if identity_hash(a) =/= identity_hash(a)
+    if a.identity_hash() =/= a.identity_hash()
         => return 0;
 
-    if identity_hash(a) == identity_hash(b)
+    if a.identity_hash() == b.identity_hash()
         => return 0;
 
     return 1;
