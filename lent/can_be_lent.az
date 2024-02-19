@@ -1,0 +1,49 @@
+public fn example(lent b: id Book) // ERROR cannot lend `id`
+{
+}
+
+public fn example(lent b: const Book) // ERROR cannot lend `const`
+{
+}
+
+// Allowed because `Book` is independent and mutable
+public fn example(lent b: const Box[mut Book])
+{
+}
+
+// Allowed because `Book` is independent and mutable
+public fn example(lent b: id Box[mut Book])
+{
+}
+
+public fn example(lent b: const Box[const Book]) // ERROR cannot be fully `const`
+{
+}
+
+public fn example(lent b: const Box[id Book]) // ERROR cannot be fully `const` or `id`
+{
+}
+
+public class Book
+{
+    public fn example(lent id self) // ERROR cannot lend `id`
+    {
+    }
+
+    public fn example(lent const self) // ERROR cannot lend `const`
+    {
+    }
+}
+
+public class Box[ind T]
+{
+    // Allowed because `T` is independent
+    public fn example(lent id self)
+    {
+    }
+
+    // Allowed because `T` is independent
+    public fn example(lent const self)
+    {
+    }
+}
