@@ -1,0 +1,14 @@
+public class Example[in TIn, out TOut, T, ind TInd] <:
+    In[TIn],
+    Out[TOut],
+    Inv[T], In[T], Out[T], Ind[T],
+    Ind[TInd],
+    Inv[TIn], // ERROR cannot use `in` parameter in invariant position
+    Inv[TOut] // ERROR cannot use `in` parameter in invariant position
+{
+}
+
+public trait In[in T] { }
+public trait Out[out T] { }
+public trait Inv[T] { }
+public trait Ind[ind T] { }
