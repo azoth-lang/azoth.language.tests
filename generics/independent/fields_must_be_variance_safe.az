@@ -1,0 +1,23 @@
+public class Example[in TIn, out TOut, T, ind TInd]
+{
+    public var var_in: TIn; // ERROR not independent safe (would allow read of supertype)
+    public var var_out: TOut; // ERROR not independent safe (would allow set to supertype)
+    public var var_inv: T;
+    public var var_ind: TInd;
+
+    public let let_in: TIn; // ERROR not independent safe (would allow read of supertype)
+    public let let_out: TOut;
+    public let let_inv: T;
+    public let let_ind: TInd;
+
+    // Private is always safe
+    var priv_var_in: TIn;
+    var priv_var_out: TOut;
+    var priv_var_inv: T;
+    var priv_var_ind: TInd;
+
+    let priv_let_in: TIn;
+    let priv_let_out: TOut;
+    let priv_let_inv: T;
+    let priv_let_ind: TInd;
+}
