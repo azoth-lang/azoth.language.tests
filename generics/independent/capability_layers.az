@@ -37,7 +37,7 @@ public class Value
     public fn is_const(const self) { }
 }
 
-public class Box[ind T]
+public class Box[T ind]
 {
     var value: T;
 

@@ -2,6 +2,6 @@ public fn main() -> void
 {
 }
 
-public class Test[in T1, out T2]
+public class Test[T1 in, T2 out]
 {
 }

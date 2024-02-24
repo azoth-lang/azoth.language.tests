@@ -19,7 +19,7 @@ public fn main() -> byte
     return 1;
 }
 
-public class Strange_Pair[out T]
+public class Strange_Pair[T out]
 {
     var first: T;
     var second: T;

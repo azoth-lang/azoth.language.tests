@@ -35,7 +35,7 @@ public class Book
     }
 }
 
-public class Box[ind T]
+public class Box[T ind]
 {
     // Allowed because `T` is independent
     public fn example(lent id self)

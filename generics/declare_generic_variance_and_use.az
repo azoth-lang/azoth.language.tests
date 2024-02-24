@@ -3,7 +3,7 @@ public fn main() -> void
     let test: Test[B, A] = new Test[A, B]();
 }
 
-public class Test[in TIn, out TOut]
+public class Test[TIn in, TOut out]
 {
 }
 

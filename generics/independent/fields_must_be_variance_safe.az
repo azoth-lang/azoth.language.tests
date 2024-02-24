@@ -1,4 +1,4 @@
-public class Example[in TIn, out TOut, T, ind TInd]
+public class Example[TIn in, TOut out, T, TInd ind]
 {
     public var var_in: TIn; // ERROR not independent safe (would allow read of supertype)
     public var var_out: TOut; // ERROR not independent safe (would allow set to supertype)
