@@ -1,0 +1,18 @@
+public fn main()
+{
+    let x = new Test[const Book]();
+    let y = new Test[id Book]();
+    let x = new Test[mut Book](); // ERROR `mut` is not `shareable`
+    let x = new Test[temp const Book](); // ERROR `temp const` is not `shareable`
+}
+
+public class Book { }
+
+public class Test[shareable T in]
+{
+}
+
+public class Subclass <:
+    Test[const Book],
+    Test[mut Book] // ERROR `mut` is not `shareable`
+{ }
