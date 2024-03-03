@@ -1,6 +1,5 @@
-public fn test_math(a: int32, b: int32)
+public fn test_math(a: nuint, b: nuint)
 {
-    let x = -a;
     let x = +a;
 
     let x = a + b;
@@ -9,7 +8,7 @@ public fn test_math(a: int32, b: int32)
     let x = a / b;
     let x = a.remainder(b);
 
-    var y: int32 = 0;
+    var y: nuint = 0;
     y += a;
     y -= a;
     y *= a;
@@ -25,5 +24,5 @@ public fn test_math(a: int32, b: int32)
 
 public fn main()
 {
-    test_math(1, 2);
+    test_math(2, 1);
 }

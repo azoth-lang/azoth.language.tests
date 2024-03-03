@@ -1,5 +1,7 @@
 public fn test_math(a: uint32, b: uint32)
 {
+    let x = +a;
+
     let x = a + b;
     let x = a - b;
     let x = a * b;

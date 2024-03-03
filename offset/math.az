@@ -1,5 +1,8 @@
 public fn test_math(a: offset, b: offset)
 {
+    let x = -a;
+    let x = +a;
+
     let x = a + b;
     let x = a - b;
     let x = a * b;
