@@ -1,0 +1,13 @@
+public const copy struct test
+{
+    public init(mut self) { }
+
+    public init(self, _: int) { }
+}
+
+public fn main()
+{
+    let _ = test();
+    let _ = test(42);
+}
+
