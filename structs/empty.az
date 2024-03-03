@@ -1,0 +1,5 @@
+public copy struct Test
+{
+}
+
+public fn main() { }
