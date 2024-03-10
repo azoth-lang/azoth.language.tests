@@ -1,14 +1,21 @@
-public class Example[TIn in, TOut out, T, TInd ind] <:
+public class Example[TIn in, T, TNonwritableOut nonwritable out, TOut out] <:
     In[TIn],
+    Inv[T], In[T], NonwritableOut[T], Out[T],
+    NonwritableOut[TNonwritableOut], Out[TNonwritableOut],
     Out[TOut],
-    Inv[T], In[T], Out[T], Ind[T],
-    Ind[TInd],
+
+    In[TNonwritableOut], // ERROR cannot use `nonwritable out` parameter in `in` position
+    In[TOut], // ERROR cannot use `nonwritable out` parameter in `in` position
     Inv[TIn], // ERROR cannot use `in` parameter in invariant position
-    Inv[TOut] // ERROR cannot use `in` parameter in invariant position
+    Inv[TNonwritableOut], // ERROR cannot use `nonwritable out` parameter in invariant position
+    Inv[TOut], // ERROR cannot use `out` parameter in invariant position
+    NonwritableOut[TIn], // ERROR cannot use `in` parameter in `nonwritable out` position
+    NonwritableOut[TOut], // ERROR cannot use `out` parameter in `nonwritable out` position
+    Out[TIn] // ERROR cannot use `in` parameter in `out` position
 {
 }
 
 public trait In[T in] { }
-public trait Out[T out] { }
 public trait Inv[T] { }
-public trait Ind[T ind] { }
+public trait NonwritableOut[T nonwritable out] { }
+public trait Out[T out] { }
