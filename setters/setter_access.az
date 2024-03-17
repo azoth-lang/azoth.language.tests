@@ -1,0 +1,18 @@
+// exit code: 42
+
+public class Test
+{
+    public var value: byte;
+
+    public set setter(mut self, value: byte)
+    {
+        .value = value;
+    }
+}
+
+public fn main() -> byte
+{
+    let t: mut Test = new Test();
+    t.setter = 42;
+    return t.value;
+}
