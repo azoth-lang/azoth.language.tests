@@ -9,6 +9,7 @@ public fn main()
 
 public class Book
 {
+    public fn test_modify(mut self) { }
 }
 
 public fn test(b1: Book, b2: const Book) { }
