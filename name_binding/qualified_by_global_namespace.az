@@ -1,0 +1,19 @@
+// exit code: 42
+
+namespace nested
+{
+    // Per language reference, this is `::` rather than `::.`
+    namespace ::
+    {
+        public fn function() -> byte
+        {
+            return 42;
+        }
+    }
+}
+
+public fn main() -> byte
+{
+    function();
+    nested.function(); // ERROR not the proper qualifiers
+}
