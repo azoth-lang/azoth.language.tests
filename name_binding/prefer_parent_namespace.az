@@ -1,3 +1,5 @@
+// exit code: 42
+
 namespace nested
 {
     public fn function() -> byte
@@ -8,7 +10,7 @@ namespace nested
 
 public fn function() -> byte
 {
-    return 0;
+    return 42;
 }
 
 public fn main() -> byte
