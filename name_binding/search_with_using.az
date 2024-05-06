@@ -1,0 +1,32 @@
+// exit code: 42
+
+namespace nested1
+{
+    public fn function() -> byte
+    {
+        return 1;
+    }
+}
+
+namespace nested2
+{
+    public fn function() -> byte
+    {
+        return 42;
+    }
+}
+
+namespace primary
+{
+    using nested1;
+
+    namespace secondary
+    {
+        using nested2;
+
+        public fn main() -> byte
+        {
+            return function();
+        }
+    }
+}
