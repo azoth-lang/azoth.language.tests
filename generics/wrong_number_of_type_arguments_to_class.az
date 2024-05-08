@@ -1,0 +1,9 @@
+public fn main() -> void
+{
+    let test = new Test[int, int](); // ERROR wrong number of arguments
+}
+
+public class Test[T]
+{
+}
+
