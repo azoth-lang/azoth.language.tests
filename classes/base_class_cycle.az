@@ -1,0 +1,7 @@
+public class A: C { }
+
+public class B: A { } // ERROR cycle in supertype
+
+public class C: B { }
+
+public class Tail: C { }

@@ -1,0 +1,9 @@
+public struct Abstract
+{
+}
+
+public class Concrete: Abstract // ERROR
+{
+}
+
+public fn main() { }

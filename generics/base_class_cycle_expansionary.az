@@ -1,0 +1,12 @@
+
+// This test shows that with a cycle, you could produce a type with an "infinite" number of
+// supertypes. Consider the full list of supertypes of `C[T]`. It contains `C[C[T]]`, therefore it
+// contains `C[C[CT]]` and so on.
+
+public class A[T]: C[C[T]] { }
+
+public class B[T]: A[T] { } // ERROR cycle in supertype
+
+public class C[T]: B[T] { }
+
+public class Tail: C { }
