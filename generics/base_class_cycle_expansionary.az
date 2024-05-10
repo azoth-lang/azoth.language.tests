@@ -9,4 +9,4 @@ public class B[T]: A[T] { } // ERROR cycle in supertype
 
 public class C[T]: B[T] { }
 
-public class Tail: C { }
+public class Tail: C[Tail] { }
