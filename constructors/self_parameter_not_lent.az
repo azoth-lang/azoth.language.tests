@@ -1,0 +1,5 @@
+public const class Test
+{
+    public new(lent mut self) // ERROR
+    { }
+}
