@@ -1,0 +1,30 @@
+public class Not_Independent[T] { }
+public class Independent[T ind] { }
+public class Shareable_Independent[T shareable ind] { }
+
+
+public class Independent_Inherit_Not[T ind]
+    : Not_Independent[T] // ERROR
+{ }
+
+public class Independent_Inherit_Independent[T ind]
+    : Independent[T]
+{ }
+
+public class Independent_Inherit_Shareable[T ind]
+    : Shareable_Independent[T] // ERROR
+{ }
+
+
+public class Shareable_Inherit_Not[T shareable ind]
+    : Not_Independent[T] // ERROR
+{ }
+
+public class Shareable_Inherit_Independent[T shareable ind]
+    : Independent[T] // ERROR
+{ }
+
+
+public class Shareable_Inherit_Shareable[T shareable ind]
+    : Shareable_Independent[T]
+{ }
