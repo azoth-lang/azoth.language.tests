@@ -1,7 +1,7 @@
-public class A: C { }
+public class A: C { } // ERROR cycle in supertype
 
 public class B: A { } // ERROR cycle in supertype
 
-public class C: B { }
+public class C: B { } // ERROR cycle in supertype
 
 public class Tail: C { }
