@@ -1,7 +1,7 @@
 public fn lent_change(lent b1: mut Book, lent b2: mut Book)
 {
     let author1 = b1.author;
-    b2.author = author1; // ERROR cannot introduce aliasing between lent parameters
+    b2.author = author1; // ERROR x2 cannot introduce aliasing between lent parameters
 }
 
 public fn main()
