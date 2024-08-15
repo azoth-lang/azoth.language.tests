@@ -1,5 +1,7 @@
 // exit code 42
 
+// Note: `uint8` is special, `byte` should be used instead. However, it should still be compiled as
+// a synonym for `byte`
 public fn main() -> byte
 {
     let a: uint8 = 42; // ERROR should be `byte`

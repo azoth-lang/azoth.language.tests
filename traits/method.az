@@ -1,4 +1,4 @@
-// exit code: 84
+// exit code: 85
 
 public fn main() -> byte
 {
@@ -21,6 +21,6 @@ public trait ExampleTrait
 
     public fn get_value_from_trait(self) -> byte
     {
-        return 42;
+        return 43;
     }
 }

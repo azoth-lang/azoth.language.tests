@@ -1,0 +1,5 @@
+public fn main() -> byte
+{
+    let x: byte;
+    return x; // ERROR use of unassigned variable `x`
+}

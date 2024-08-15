@@ -7,6 +7,6 @@ public fn main() -> byte
         let result: byte = 42;
         => result;
         let result: byte = 45; // ERROR statement after result
-        => result; // ERROR statement after result
+        => result; // Note: no error because it is reported on the first statement only to avoid too many errors
     };
 }

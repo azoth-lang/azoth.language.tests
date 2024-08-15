@@ -1,0 +1,23 @@
+public fn main()
+{
+    // TODO add support for moving from an expression (though perhaps this case should be allowed by an implicit move?)
+    take(/*move*/ create(new Author())); // ERROR need `move`
+}
+
+public class Book
+{
+    public let author: mut Author;
+
+    public new(mut self, .author) { }
+}
+
+public class Author
+{
+}
+
+// A function that returns mutable rather than isolated because it doesn't know if the author is
+// isolated.
+public fn create(author: mut Author) -> mut Book
+    => new Book(author);
+
+public fn take(_: iso Book) { }

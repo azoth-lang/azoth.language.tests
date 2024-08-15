@@ -57,6 +57,19 @@ public fn value_type_shadowing()
     {
         var z: int = 2; // ERROR can't shadow `var` with `var`
     }
+
+    let a: int = 1;
+    if a == 2
+    {
+        use_int(a);
+        let a: int = 2; // ERROR can't shadow when outer binding used after nested scope
+    }
+    else
+    {
+        use_int(a);
+    }
+    use_int(a);
+    // use_int(a); // TODO Currently causes duplicate error on variable definition
 }
 
 public fn value_type_not_shadowing()
@@ -130,6 +143,19 @@ public fn reference_type_shadowing()
     {
         var z: Test = new Test(); // ERROR var can't shadow var
     }
+
+    let a: int = 1;
+    if a == 2
+    {
+        use_int(a);
+        let a: int = 2; // ERROR can't shadow when outer binding used after nested scope
+    }
+    else
+    {
+        use_int(a);
+    }
+    use_int(a);
+    // use_int(a); // TODO Currently causes duplicate error on variable definition
 }
 
 public fn reference_type_not_shadowing()
