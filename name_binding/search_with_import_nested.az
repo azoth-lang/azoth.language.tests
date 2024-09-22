@@ -18,7 +18,7 @@ namespace nested2
 
 namespace primary
 {
-    using nested2;
+    import nested2;
 
     public fn main() -> byte
     {
