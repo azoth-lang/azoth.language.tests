@@ -5,7 +5,7 @@ public fn main() -> byte
     let e1: iso = new Example();
     let other: const = new Example();
     let e2 = transform(move e1, other, other);
-    if id e1 == id e2 => return 1
+    if e1 ≡≡ e2 => return 1
     else => return 0;
 }
 

@@ -5,7 +5,7 @@ public fn main() -> byte
     let book1 = new Book();
     let book2 = new Book();
 
-    if id book1 == id book2 => return 1
+    if id book1 ≡≡ id book2 => return 1
     else => return 0;
 }
 

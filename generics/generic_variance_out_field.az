@@ -6,15 +6,15 @@ public fn main() -> byte
     let s2 = new Circle();
     let p: mut Strange_Pair[Shape] = new Strange_Pair[Circle](s1, s2);
 
-    if id p.get_first() =/= id s1 => return 0;
-    if id p.get_second() =/= id s2 => return 0;
+    if p.get_first() ≡/≡ s1 => return 0;
+    if p.get_second() ≡/≡ s2 => return 0;
 
     // first and second can still be swapped even though now seen as `Shape`s because they must
     // have actually been the same type of `Shape` when it was constructed.
     p.swap();
 
-    if id p.get_first() =/= id s2 => return 0;
-    if id p.get_second() =/= id s1 => return 0;
+    if p.get_first() ≡/≡ s2 => return 0;
+    if p.get_second() ≡/≡ s1 => return 0;
 
     return 1;
 }

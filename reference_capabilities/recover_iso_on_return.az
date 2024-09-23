@@ -4,7 +4,7 @@ public fn main() -> byte
 {
     let box1: iso = new IntBox();
     let box2 = increment(move box1);
-    if id box1 == id box2 => return 1
+    if box1 ≡≡ box2 => return 1
     else => return 0;
 }
 
