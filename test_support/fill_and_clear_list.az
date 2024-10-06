@@ -10,5 +10,5 @@ public fn main(output: mut TestOutput) -> byte
 
     items.clear();
 
-    return (items.get_count() == 0) as byte;
+    return (items.count == 0) as byte;
 }
