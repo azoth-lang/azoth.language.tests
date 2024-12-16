@@ -1,0 +1,19 @@
+// The `int` type is effectively a `const struct` and so should disallow capabilities like one
+
+public fn main()
+{
+    let a: iso int; // ERROR cannot declare `iso` of `int`
+    let b: mut int; // ERROR cannot declare `mut` of `int`
+    let d: int;
+    let e: const int;
+    let f: id int;
+}
+
+public fn example(
+    a: iso int, // ERROR cannot declare `iso` of `int`
+    b: mut int, // ERROR cannot declare `mut` of `int`
+    d: int,
+    e: const int,
+    f: id int)
+{
+}
