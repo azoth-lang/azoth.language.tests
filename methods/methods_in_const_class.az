@@ -3,7 +3,7 @@ public const class Test
     public fn const_method(const self) -> byte
         => 42;
 
-    public fn read_only_method(self) -> byte // ERROR `self` must be `const`
+    public fn read_only_method(self) -> byte // No error, assumed `const`
         => 42;
 
     public fn mut_method(mut self) -> byte // ERROR `self` must be `const`
