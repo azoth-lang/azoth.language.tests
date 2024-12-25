@@ -45,12 +45,12 @@ public class Concrete_Factory_2 <: Abstract_Factory
 public trait Product_A
 {
     // TODO use a getter
-    public fn get_name(self) -> String;
+    public fn get_name(self) -> string;
 }
 
 public class Product_A1 <: Product_A
 {
-    public fn get_name(self) -> String
+    public fn get_name(self) -> string
     {
         return "A1";
     }
@@ -58,7 +58,7 @@ public class Product_A1 <: Product_A
 
 public class Product_A2 <: Product_A
 {
-    public fn get_name(self) -> String
+    public fn get_name(self) -> string
     {
         return "A2";
     }
@@ -67,12 +67,12 @@ public class Product_A2 <: Product_A
 public trait Product_B
 {
     // TODO use a getter
-    public fn get_name(self) -> String;
+    public fn get_name(self) -> string;
 }
 
 public class Product_B1 <: Product_B
 {
-    public fn get_name(self) -> String
+    public fn get_name(self) -> string
     {
         return "B1";
     }
@@ -80,7 +80,7 @@ public class Product_B1 <: Product_B
 
 public class Product_B2 <: Product_B
 {
-    public fn get_name(self) -> String
+    public fn get_name(self) -> string
     {
         return "B1";
     }
