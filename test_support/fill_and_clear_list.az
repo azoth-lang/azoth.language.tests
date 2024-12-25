@@ -1,6 +1,6 @@
 // exit code: 1
 
-public fn main(output: mut TestOutput) -> byte
+public fn main(output: mut Test_Output) -> byte
 {
     let items: mut = new List[int]();
     foreach i: int in 1..100

@@ -1,6 +1,6 @@
 // stdout file: hello_world.txt
 
-public fn main(output: mut TestOutput)
+public fn main(output: mut Test_Output)
 {
     output.write_line("Hello World!");
 }

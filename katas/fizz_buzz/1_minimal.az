@@ -1,6 +1,6 @@
 // stdout file: stdout.txt
 
-public fn main(output: mut TestOutput)
+public fn main(output: mut Test_Output)
 {
     var n: uint = 1;
     loop

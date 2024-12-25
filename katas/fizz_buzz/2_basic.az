@@ -1,6 +1,6 @@
 // stdout file: stdout.txt
 
-public fn main(output: mut TestOutput)
+public fn main(output: mut Test_Output)
 {
     foreach n/*: uint*/ in 1..100
     {

@@ -1,6 +1,6 @@
 // stdout file: fill_and_print_list.txt
 
-public fn main(output: mut TestOutput) -> void
+public fn main(output: mut Test_Output) -> void
 {
     let items: mut = new List[int]();
     foreach i: int in 1..100

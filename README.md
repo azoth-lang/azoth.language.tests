@@ -11,7 +11,7 @@ easy.
 
 The test package consists of two type declarations in the global namespace, extensions to the simple
 types for conversion to string, and any necessary implementation. The two types are a simplified
-`string` struct and a `TestOutput` trait to in lieu of console output.
+`string` struct and a `Test_Output` trait to in lieu of console output.
 
 ### Strings
 
@@ -34,11 +34,11 @@ published copy struct string
 
 ### Test Output
 
-The `TestOutput` trait provided by the test package must match the declaration below. This is a
+The `Test_Output` trait provided by the test package must match the declaration below. This is a
 capability accepted by the main function.
 
 ```azoth
-published trait TestOutput
+published trait Test_Output
 {
     published fn write(mut self, value: string);
 

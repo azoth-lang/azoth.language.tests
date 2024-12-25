@@ -1,5 +1,9 @@
 // stdout file: abstract_factory.txt
 
+
+// TODO this paragraph needs updated. Return types can be `mut` and `iso` can be recovered when it
+//      makes sense.
+
 // The one issue with the abstract factory pattern is whether the return types
 // can be `iso` or must be `owned`. Clearly any arguments will be assumed to
 // be reachable, but what can the base class assume about the isolation of the
