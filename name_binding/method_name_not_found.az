@@ -1,0 +1,7 @@
+public const class Test { }
+
+public fn main()
+{
+    let t = new Test();
+    t.method(); // ERROR
+}
