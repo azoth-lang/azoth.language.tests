@@ -1,0 +1,4 @@
+public fn main()
+{
+    value = 42; // ERROR
+}

@@ -1,0 +1,4 @@
+public fn main()
+{
+    function(); // ERROR
+}
