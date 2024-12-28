@@ -1,4 +1,4 @@
-public const copy struct test
+public const struct test
 {
     public init(mut self) { }
 

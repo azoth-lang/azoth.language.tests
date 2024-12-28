@@ -1,4 +1,4 @@
-public const copy struct Abstract
+public const struct Abstract
 {
 }
 

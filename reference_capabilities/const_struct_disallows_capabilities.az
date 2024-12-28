@@ -16,6 +16,6 @@ public fn example(
 {
 }
 
-public const copy struct Book
+public const struct Book
 {
 }

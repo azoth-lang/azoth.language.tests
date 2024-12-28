@@ -1,4 +1,4 @@
-public copy struct Test
+public struct Test
 {
 }
 

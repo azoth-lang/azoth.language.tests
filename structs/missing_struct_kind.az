@@ -1,3 +1,0 @@
-public const struct Book // ERROR missing `copy` or `move`
-{
-}

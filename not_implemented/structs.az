@@ -1,4 +1,4 @@
 // compile: errors
-public mut copy struct Book
+public mut struct Book
 {
 }
