@@ -1,0 +1,12 @@
+public const struct test
+{
+    public init(lent mut self) // ERROR
+    { }
+}
+
+
+public const class Test
+{
+    public init(lent mut self) // ERROR
+    { }
+}

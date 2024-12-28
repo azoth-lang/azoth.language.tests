@@ -1,5 +1,0 @@
-public const struct Test
-{
-    public init(lent mut self) // ERROR
-    { }
-}

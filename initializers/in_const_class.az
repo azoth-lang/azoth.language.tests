@@ -1,0 +1,13 @@
+public const class Test
+{
+    public init(mut self) { }
+
+    public init(self, _: int) { }
+}
+
+public fn main()
+{
+    let _ = Test();
+    let _ = Test(42);
+}
+
