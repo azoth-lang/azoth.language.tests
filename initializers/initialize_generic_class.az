@@ -1,0 +1,9 @@
+public class Test[T]
+{
+    public init(self, _: T) { }
+}
+
+public fn main()
+{
+    let _ = Test[int](42);
+}
