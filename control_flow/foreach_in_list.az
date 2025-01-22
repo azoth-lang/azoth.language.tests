@@ -1,7 +1,7 @@
 // exit code: 42
 public fn main() -> byte
 {
-    let items: mut = new List[byte]();
+    let items: mut = List[byte]();
     items.add(4);
     items.add(5);
     items.add(12);

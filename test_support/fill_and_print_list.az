@@ -2,7 +2,7 @@
 
 public fn main(output: mut Test_Output) -> void
 {
-    let items: mut = new List[int]();
+    let items: mut = List[int]();
     foreach i: int in 1..100
     {
         items.add(i);
