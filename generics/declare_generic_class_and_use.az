@@ -1,6 +1,6 @@
 public fn main() -> void
 {
-    let test: Test[int] = new Test[int]();
+    let test: Test[int] = Test[int]();
 }
 
 public class Test[T]

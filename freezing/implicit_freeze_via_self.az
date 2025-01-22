@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: Book = new Book();
+    let book: Book = Book();
     book.publish();
 }
 

@@ -2,9 +2,9 @@
 
 public fn main() -> byte
 {
-    let s1 = new Circle();
-    let s2 = new Circle();
-    let p: mut Strange_Pair[Shape] = new Strange_Pair[Circle](s1, s2);
+    let s1 = Circle();
+    let s2 = Circle();
+    let p: mut Strange_Pair[Shape] = Strange_Pair[Circle](s1, s2);
 
     if p.get_first() ≡/≡ s1 => return 0;
     if p.get_second() ≡/≡ s2 => return 0;
@@ -24,7 +24,7 @@ public class Strange_Pair[T out]
     var first: T;
     var second: T;
 
-    public new(mut self, .first, .second) { }
+    public init(mut self, .first, .second) { }
 
     public fn get_first(self) -> self▷T => .first;
 

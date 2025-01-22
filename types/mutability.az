@@ -4,8 +4,8 @@ public class Test
 
 public fn main()
 {
-    let m: iso Test = new Test();
-    let i: const Test = new Test();
+    let m: iso Test = Test();
+    let i: const Test = Test();
 
     mutable_alias(m);
 

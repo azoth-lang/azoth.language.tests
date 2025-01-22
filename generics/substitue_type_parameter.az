@@ -1,6 +1,6 @@
 public fn main()
 {
-    let test = new Test[int]();
+    let test = Test[int]();
     let i: int = test.test(42);
 }
 

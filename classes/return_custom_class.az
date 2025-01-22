@@ -2,7 +2,7 @@ public class Source
 {
     public fn create(self) -> const Result
     {
-        return new Result();
+        return Result();
     }
 }
 
@@ -12,5 +12,5 @@ public class Result
 
 public fn main()
 {
-    new Source().create();
+    Source().create();
 }

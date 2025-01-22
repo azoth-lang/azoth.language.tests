@@ -2,12 +2,12 @@
 
 public fn main()
 {
-    let book: mut = new Book(new Author());
+    let book: mut = Book(Author());
     {
         let editor = book.edit();
-        book.author = new Author(); // Allowed because `book` is still mutable
+        book.author = Author(); // Allowed because `book` is still mutable
     }
-    book.author = new Author();
+    book.author = Author();
 }
 
 public class Book
@@ -15,12 +15,10 @@ public class Book
     public var author: Author;
 
     // The inferred return type of this is `mut Book`
-    public new(mut self, .author) { }
+    public init(mut self, .author) { }
 
     public fn edit(lent mut self) -> mut Editor
-    {
-        return new Editor();
-    }
+        => Editor();
 }
 
 public class Author
@@ -29,5 +27,5 @@ public class Author
 
 public class Editor
 {
-    public new(mut self) { }
+    public init(mut self) { }
 }

@@ -13,7 +13,7 @@ public class ByteBox
 
 public fn create() -> mut ByteBox
 {
-    let b: mut = new ByteBox();
+    let b: mut = ByteBox();
     b.value = 42;
     return b;
 }

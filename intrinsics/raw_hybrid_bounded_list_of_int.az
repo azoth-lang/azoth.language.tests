@@ -2,7 +2,7 @@
 
 public fn main(output: mut Test_Output) -> byte
 {
-    let items: mut = new Raw_Hybrid_Bounded_List[void, int](10);
+    let items: mut = Raw_Hybrid_Bounded_List[void, int](10);
     if items.capacity =/= 10 => ABORT("Incorrect capacity");
     items.add(0);
     items.add(1);

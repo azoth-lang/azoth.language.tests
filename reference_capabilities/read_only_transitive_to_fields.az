@@ -2,7 +2,7 @@ public class Book
 {
     let author: mut Author;
 
-    public new(mut self, .author) { }
+    public init(mut self, .author) { }
 
     public fn example(self)
     {

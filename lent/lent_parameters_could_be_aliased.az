@@ -8,7 +8,7 @@ public fn lent_change(lent b1: mut ByteBox, lent b2: mut ByteBox) -> byte
 
 public fn main() -> byte
 {
-    let b: iso = new ByteBox(1);
+    let b: iso = ByteBox(1);
     return lent_change(b, b);
 }
 
@@ -16,5 +16,5 @@ public class ByteBox
 {
     public var value: byte;
 
-    public new(mut self, .value) { }
+    public init(mut self, .value) { }
 }

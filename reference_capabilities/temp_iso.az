@@ -1,11 +1,11 @@
 public fn main()
 {
-    let book: mut = new Book(new Author());
+    let book: mut = Book(Author());
     {
         let editor = book.edit();
-        book.author = new Author(); // ERROR `book` has been borrowed `temp iso`
+        book.author = Author(); // ERROR `book` has been borrowed `temp iso`
     }
-    book.author = new Author();
+    book.author = Author();
 }
 
 public class Book
@@ -13,12 +13,12 @@ public class Book
     public var author: Author;
 
     // The inferred return type of this is `mut Book`
-    public new(mut self, .author) { }
+    public init(mut self, .author) { }
 
     public fn edit(temp iso self) -> mut Editor
     {
         // Shows one can move a `temp iso` parameter
-        return new Editor(move self);
+        return Editor(move self);
     }
 }
 
@@ -30,5 +30,5 @@ public class Editor
 {
     public let book: temp iso Book;
 
-    public new(mut self, .book) { }
+    public init(mut self, .book) { }
 }

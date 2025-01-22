@@ -1,6 +1,6 @@
 public fn main() -> void
 {
-    let test: Test[B, A] = new Test[A, B]();
+    let test: Test[B, A] = Test[A, B]();
 }
 
 public class Test[TIn in, TOut out]

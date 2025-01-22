@@ -1,7 +1,7 @@
 public fn main()
 {
     optional_parameter(none);
-    optional_parameter(new Book());
+    optional_parameter(Book());
     non_optional_parameter(none); // ERROR cannot convert `none` to `Book`
     optional_variables();
     let x: Book? = optional_return(false);
@@ -19,9 +19,9 @@ public fn non_optional_parameter(_: Book)
 public fn optional_variables()
 {
     let x: Book? = none;
-    let y: Book? = new Book();
+    let y: Book? = Book();
     var z: Book? = none;
-    z = new Book();
+    z = Book();
 }
 
 public fn optional_return(return_none: bool) -> Book?
@@ -32,7 +32,7 @@ public fn optional_return(return_none: bool) -> Book?
     }
     else
     {
-        return new Book();
+        return Book();
     }
 }
 

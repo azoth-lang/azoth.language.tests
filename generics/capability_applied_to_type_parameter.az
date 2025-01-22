@@ -2,7 +2,7 @@ public const class Box[T]
 {
     let v: const T; // ERROR can't apply capability to type parameter
 
-    public new(self, .v) { }
+    public init(self, .v) { }
 
     public fn value(const self) -> const▷T
     {

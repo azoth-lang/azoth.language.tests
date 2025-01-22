@@ -10,6 +10,6 @@ public class Test
 
 public fn main() -> byte
 {
-    let t: Test = new Test();
+    let t: Test = Test();
     return t.method();
 }

@@ -20,9 +20,9 @@ public class Test
 
 public fn reference_type_binding_mutability()
 {
-    let x: Test = new Test();
-    x = new Test(); // ERROR binding `x` is immutable
+    let x: Test = Test();
+    x = Test(); // ERROR binding `x` is immutable
 
-    var y: Test = new Test();
-    y = new Test();
+    var y: Test = Test();
+    y = Test();
 }

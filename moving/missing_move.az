@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: iso Book = new Book();
+    let book: iso Book = Book();
     take(book); // ERROR need `move`
     modify(book); // Type is still `mut Book`
 }

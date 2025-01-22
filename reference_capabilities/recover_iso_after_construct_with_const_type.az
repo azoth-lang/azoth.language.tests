@@ -1,13 +1,13 @@
 public fn main()
 {
-    example(new Author());
+    example(Author());
 }
 
 // This function is used so that it is clear that the author may be referenced elsewhere and the
 // recover operation isn't working because the author is isolated.
 public fn example(author: const Author)
 {
-    let book: iso = new Book(author);
+    let book: iso = Book(author);
 
     take(move book);
 }
@@ -16,7 +16,7 @@ public class Book
 {
     public let author: Author;
 
-    public new(mut self, .author) { }
+    public init(mut self, .author) { }
 }
 
 public const class Author

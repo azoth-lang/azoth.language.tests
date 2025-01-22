@@ -1,12 +1,12 @@
 public fn main()
 {
-    example(new Author());
+    example(Author());
 }
 
 // This function is used so that it cannot recover the author to `iso` or `const`
 public fn example(author: Author)
 {
-    let book: iso = new Book(author); // ERROR cannot recover `iso` because it shares `author`
+    let book: iso = Book(author); // ERROR cannot recover `iso` because it shares `author`
 
     take(move book); // ERROR can't move because it is shared
 }
@@ -16,7 +16,7 @@ public class Book
     public let author: Author;
 
     // The inferred return type of this must be `mut Book`?
-    public new(mut self, .author) { }
+    public init(mut self, .author) { }
 }
 
 public class Author

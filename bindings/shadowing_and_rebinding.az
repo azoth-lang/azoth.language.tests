@@ -99,17 +99,17 @@ public class Test
 
 public fn reference_type_rebinding()
 {
-    let w: Test = new Test();
-    let w: Test = new Test();
+    let w: Test = Test();
+    let w: Test = Test();
 
-    let x: Test = new Test();
-    var x: Test = new Test(); // ERROR can't rebind `let` with `var`
+    let x: Test = Test();
+    var x: Test = Test(); // ERROR can't rebind `let` with `var`
 
-    var y: Test = new Test();
-    let y: Test = new Test(); // ERROR can't rebind `var` with `let`
+    var y: Test = Test();
+    let y: Test = Test(); // ERROR can't rebind `var` with `let`
 
-    var z: Test = new Test();
-    var z: Test = new Test(); // ERROR can't rebind `var` with `var`
+    var z: Test = Test();
+    var z: Test = Test(); // ERROR can't rebind `var` with `var`
 }
 
 public fn use_test(_: Test)
@@ -118,30 +118,30 @@ public fn use_test(_: Test)
 
 public fn reference_type_shadowing()
 {
-    let v: Test = new Test();
+    let v: Test = Test();
     {
-        let v: Test = new Test();
+        let v: Test = Test();
     }
 
-    let w: Test = new Test();
+    let w: Test = Test();
     {
-        let w: Test = new Test(); // ERROR let can't shadow when outer let is used after end of scope
+        let w: Test = Test(); // ERROR let can't shadow when outer let is used after end of scope
     }
     use_test(w);
 
-    let x: Test = new Test();
+    let x: Test = Test();
     {
-        var x: Test = new Test(); // ERROR var can't shadow let
+        var x: Test = Test(); // ERROR var can't shadow let
     }
 
-    var y: Test = new Test();
+    var y: Test = Test();
     {
-        let y: Test = new Test(); // ERROR let can't shadow var
+        let y: Test = Test(); // ERROR let can't shadow var
     }
 
-    var z: Test = new Test();
+    var z: Test = Test();
     {
-        var z: Test = new Test(); // ERROR var can't shadow var
+        var z: Test = Test(); // ERROR var can't shadow var
     }
 
     let a: int = 1;
@@ -161,10 +161,10 @@ public fn reference_type_shadowing()
 public fn reference_type_not_shadowing()
 {
     {
-        var x: Test = new Test();
+        var x: Test = Test();
     }
     {
-        var x: Test = new Test();
+        var x: Test = Test();
     }
 }
 

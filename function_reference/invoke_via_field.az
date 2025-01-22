@@ -2,7 +2,7 @@
 
 public fn main() -> byte
 {
-    let t = new Test(example);
+    let t = Test(example);
 
     return t.call();
 }
@@ -13,7 +13,7 @@ public const class Test
 {
     let func: () -> byte;
 
-    public new(self, .func) { }
+    public init(self, .func) { }
 
     public fn call(const self) -> byte
         => .func();

@@ -3,7 +3,7 @@ public class Book
     public let page_count: int;
     public var copies_sold: int;
 
-    public new(mut self, page_count: int)
+    public init(mut self, page_count: int)
     {
         // Even though the binding is immutable, this is the constructor and it hasn't been assigned yet
         .page_count = page_count;
@@ -23,7 +23,7 @@ public class Book
 
 public fn main()
 {
-    let book: mut = new Book(42);
+    let book: mut = Book(42);
     book.sell(42);
     book.copies_sold += 43;
     book.add_pages(44);

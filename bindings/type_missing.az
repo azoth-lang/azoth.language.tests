@@ -1,6 +1,6 @@
 public fn main()
 {
-    let x: = new Test(); // ERROR must include type or reference capability
+    let x: = Test(); // ERROR must include type or reference capability
 }
 
 

@@ -2,8 +2,8 @@
 
 public fn main() -> byte
 {
-    let editor = new Book_Editor();
-    let storage: Storage[Book] = new Storage[mut Book](editor, new Book(24));
+    let editor = Book_Editor();
+    let storage: Storage[Book] = Storage[mut Book](editor, Book(24));
 
     // Without the error below, even though `storage` is `Storage[Book]`, the `read_processed()`
     // method is able to mutate the book. It seems like there could be case where this even violates
@@ -23,7 +23,7 @@ public class Storage[T ind]
     let value: T;
     let pipeline: Pipeline[T]; // ERROR does not maintain the independence
 
-    public new(mut self, .pipeline, .value) { }
+    public init(mut self, .pipeline, .value) { }
 
     // Because of the violation of independence above, this method is unsafe since the pipeline
     // stored uses the previous capabilities of `T`.
@@ -52,5 +52,5 @@ public class Book
 {
     public var pages: byte;
 
-    public new(mut self, .pages) { }
+    public init(mut self, .pages) { }
 }

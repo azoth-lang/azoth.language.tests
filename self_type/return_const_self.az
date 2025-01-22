@@ -11,6 +11,6 @@ public const class Test
 
 public fn main() -> byte
 {
-    let t = new Test();
+    let t = Test();
     return t.test().value();
 }

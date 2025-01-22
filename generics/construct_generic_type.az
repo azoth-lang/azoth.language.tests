@@ -1,4 +1,4 @@
 public fn main() -> void
 {
-    let empty = new Raw_Hybrid_Bounded_List[int, int](42, 0);
+    let empty = Raw_Hybrid_Bounded_List[int, int](42, 0);
 }

@@ -4,7 +4,7 @@ public class Inner
 {
     public var value: byte;
 
-    public new(mut self)
+    public init(mut self)
     {
         self.value = 1;
     }
@@ -14,15 +14,15 @@ public class Outer
 {
     public var inner: mut Inner;
 
-    public new(mut self)
+    public init(mut self)
     {
-        self.inner = new Inner();
+        self.inner = Inner();
     }
 }
 
 public fn main() -> byte
 {
-    let t: mut Outer = new Outer();
+    let t: mut Outer = Outer();
     t.inner.value = 42;
     return t.inner.value;
 }

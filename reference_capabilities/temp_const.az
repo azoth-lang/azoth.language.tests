@@ -1,11 +1,11 @@
 public fn main()
 {
-    let book: mut = new Book(new Author());
+    let book: mut = Book(Author());
     {
         let reader = book.read_book();
-        book.author = new Author(); // ERROR `book` is `temp const`
+        book.author = Author(); // ERROR `book` is `temp const`
     }
-    book.author = new Author();
+    book.author = Author();
 }
 
 public class Book
@@ -13,12 +13,10 @@ public class Book
     public var author: Author;
 
     // The inferred return type of this is `mut Book`
-    public new(mut self, .author) { }
+    public init(mut self, .author) { }
 
     public fn read_book(temp const self) -> mut Reader
-    {
-        return new Reader(self);
-    }
+        => Reader(self);
 }
 
 public class Author
@@ -29,5 +27,5 @@ public class Reader
 {
     public let book: temp const Book;
 
-    public new(mut self, .book) { }
+    public init(mut self, .book) { }
 }

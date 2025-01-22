@@ -22,12 +22,12 @@ public class Concrete_Factory_1 <: Abstract_Factory
 {
     public fn create_product_a(self) -> iso Product_A
     {
-        return new Product_A1();
+        return Product_A1();
     }
 
     public fn create_product_b(self) -> iso Product_B
     {
-        return new Product_B1();
+        return Product_B1();
     }
 }
 
@@ -35,12 +35,12 @@ public class Concrete_Factory_2 <: Abstract_Factory
 {
     public fn create_product_a(self) -> iso Product_A
     {
-        return new Product_A2();
+        return Product_A2();
     }
 
     public fn create_product_b(self) -> iso Product_B
     {
-        return new Product_B2();
+        return Product_B2();
     }
 }
 
@@ -94,11 +94,11 @@ public class Product_B2 <: Product_B
 
 public fn main(console: mut Console)
 {
-    let f1 = new Concrete_Factory_1();
+    let f1 = Concrete_Factory_1();
     console.write_line(f1.create_product_a().get_name());
     console.write_line(f1.create_product_b().get_name());
 
-    let f2 = new Concrete_Factory_2();
+    let f2 = Concrete_Factory_2();
     console.write_line(f2.create_product_a().get_name());
     console.write_line(f2.create_product_b().get_name());
 }

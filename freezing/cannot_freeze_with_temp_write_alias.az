@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: mut Book = new Book();
+    let book: mut Book = Book();
     book.test_modify();
 
     test(book, freeze book); // ERROR cannot freeze book

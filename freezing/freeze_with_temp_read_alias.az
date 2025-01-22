@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: mut Book = new Book();
+    let book: mut Book = Book();
 
     // The `as Book` shouldn't be necessary
     test(book as Book, freeze book);

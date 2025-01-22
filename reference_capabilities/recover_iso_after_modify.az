@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: mut Book = new Book();
+    let book: mut Book = Book();
     book.modify();
 
     take(move book);

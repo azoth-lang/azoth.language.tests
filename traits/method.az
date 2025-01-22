@@ -2,7 +2,7 @@
 
 public fn main() -> byte
 {
-    let example = new ExampleClass();
+    let example = ExampleClass();
     return example.get_value() + example.get_value_from_trait();
 }
 

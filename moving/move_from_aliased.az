@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: iso Book = new Book();
+    let book: iso Book = Book();
     let borrow: Book = book;
 
     take(move book); // ERROR can't recover isolation because aliased by `borrow`

@@ -4,5 +4,5 @@ public class Book
 
 public fn main()
 {
-    let a: Any = new Book();
+    let a: Any = Book();
 }

@@ -15,6 +15,6 @@ public class Concrete: Abstract
 
 public fn main() -> byte
 {
-    let a: Abstract = new Concrete();
+    let a: Abstract = Concrete();
     return a.method();
 }

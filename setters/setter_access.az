@@ -12,7 +12,7 @@ public class Test
 
 public fn main() -> byte
 {
-    let t: mut Test = new Test();
+    let t: mut Test = Test();
     t.setter = 42;
     return t.value;
 }

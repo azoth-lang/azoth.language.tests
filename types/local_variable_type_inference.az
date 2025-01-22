@@ -6,10 +6,10 @@ public class Test
 
 public fn main()
 {
-    let x = new Test();
+    let x = Test();
     x.test_read();
     x.test_mutate(); // ERROR not mutable
-    let y: mut = new Test();
+    let y: mut = Test();
     y.test_read();
     y.test_mutate();
 }

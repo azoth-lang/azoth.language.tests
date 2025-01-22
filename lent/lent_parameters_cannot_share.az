@@ -13,7 +13,7 @@ public class Book
     public var author: Author;
 
     // The inferred return type of this is `mut Book`
-    public new(mut self, .author) { }
+    public init(mut self, .author) { }
 }
 
 public class Author

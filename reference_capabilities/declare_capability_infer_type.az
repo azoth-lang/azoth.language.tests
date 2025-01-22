@@ -1,9 +1,9 @@
 public fn main()
 {
-    let book1: mut = new Book(); // a mutable reference
+    let book1: mut = Book(); // a mutable reference
     book1.modify();
 
-    let book2: const = new Book(); // cannot ever be mutated.
+    let book2: const = Book(); // cannot ever be mutated.
     book2.modify(); // ERROR cannot mutate an immutable object.
 
     let reader1 = book1; // ok; cannot be mutated by this reference.
@@ -13,12 +13,12 @@ public fn main()
     reader2.modify(); // ERROR cannot mutate a readonly object.
 
     // Test move with explicit reference capability
-    let book3: mut = new Book();
+    let book3: mut = Book();
     let reader3: const = move book3;
     book3.modify(); // ERROR cannot mutate through `id` reference.
     reader3.modify(); // ERROR cannot mutate an immutable object.
 
-    let c1 = new Const();
+    let c1 = Const();
     is_const(c1);
 }
 

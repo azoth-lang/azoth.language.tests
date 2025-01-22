@@ -2,9 +2,9 @@
 
 public fn main() -> byte
 {
-    let n: mut = new Number();
+    let n: mut = Number();
     n.increment();
-    let b: mut = new Box[mut Number](n);
+    let b: mut = Box[mut Number](n);
     b.mut_value().increment();
 
     if n ≡/≡ b.read_value() => return 0;
@@ -16,7 +16,7 @@ public class Box[T]
 {
     let v: T;
 
-    public new(mut self, .v) { }
+    public init(mut self, .v) { }
 
     public fn mut_value(mut self) -> self▷T => .v;
 
@@ -27,7 +27,7 @@ public class Number
 {
     var v: byte;
 
-    public new(mut self)
+    public init(mut self)
     {
         .v = 0;
     }

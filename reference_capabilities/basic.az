@@ -1,9 +1,9 @@
 public fn main()
 {
-    let book1: mut Book = new Book(); // a mutable reference
+    let book1: mut Book = Book(); // a mutable reference
     book1.modify();
 
-    let book2: const Book = new Book(); // cannot ever be mutated
+    let book2: const Book = Book(); // cannot ever be mutated
     book2.modify(); // ERROR cannot mutate an immutable object.
 
     let reader1: Book = book1; // ok; cannot be mutated by this reference.

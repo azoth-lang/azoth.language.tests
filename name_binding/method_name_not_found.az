@@ -2,6 +2,6 @@ public const class Test { }
 
 public fn main()
 {
-    let t = new Test();
+    let t = Test();
     t.method(); // ERROR
 }
