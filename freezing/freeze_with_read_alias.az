@@ -1,9 +1,9 @@
 public fn main()
 {
-    let book: mut Book = new Book();
+    let book: mut Book = Book();
     let reader = book;
 
-    let frozenBook: const = freeze book;
+    let frozenBook = freeze book;
 
     book.test_modify(); // ERROR `const` due to flow typing
     reader.test_read();

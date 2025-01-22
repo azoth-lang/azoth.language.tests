@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: iso Book = new Book();
+    let book: iso Book = Book();
     book.take();
     read_book(book); // ERROR is `id Book`
     identify(book);

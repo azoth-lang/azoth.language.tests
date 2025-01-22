@@ -1,0 +1,20 @@
+public fn main()
+{
+    // Since an implicit move (e.g. `wrapped_book: const` is allowed, an explicit move should be allowed)
+    let wrapped_book = move Book().wrap();
+    wrapped_book.take();
+}
+
+public class Book
+{
+    public fn wrap(mut self) -> mut Wrapped_Book => Wrapped_Book(self);
+}
+
+public class Wrapped_Book
+{
+    let book: mut Book;
+
+    public init(mut self, .book) { }
+
+    public fn take(iso self) { }
+}

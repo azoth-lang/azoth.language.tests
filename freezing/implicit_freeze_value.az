@@ -1,0 +1,24 @@
+public fn main()
+{
+    // implicitly freeze the value returned from wrap()
+    let wrapped_book: const = Book().wrap();
+
+    wrapped_book.test_modify(); // ERROR `const` due to freeze
+    wrapped_book.test_read();
+}
+
+public class Book
+{
+    public fn wrap(mut self) -> mut Wrapped_Book => Wrapped_Book(self);
+}
+
+public class Wrapped_Book
+{
+    let book: mut Book;
+
+    public init(mut self, .book) { }
+
+    public fn test_modify(mut self) {  }
+
+    public fn test_read(self) { }
+}

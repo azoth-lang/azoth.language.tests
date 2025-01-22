@@ -1,0 +1,24 @@
+public fn main()
+{
+    // Since an implicit freeze (e.g. `wrapped_book: const` is allowed, an explicit freeze should be allowed)
+    let wrapped_book = freeze Book().wrap();
+
+    wrapped_book.test_modify(); // ERROR `const` due to freeze
+    wrapped_book.test_read();
+}
+
+public class Book
+{
+    public fn wrap(mut self) -> mut Wrapped_Book => Wrapped_Book(self);
+}
+
+public class Wrapped_Book
+{
+    let book: mut Book;
+
+    public init(mut self, .book) { }
+
+    public fn test_modify(mut self) {  }
+
+    public fn test_read(self) { }
+}

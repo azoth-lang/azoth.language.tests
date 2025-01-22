@@ -1,0 +1,19 @@
+public fn main()
+{
+    let wrapped_book: iso = Book().wrap();
+    wrapped_book.take();
+}
+
+public class Book
+{
+    public fn wrap(mut self) -> mut Wrapped_Book => Wrapped_Book(self);
+}
+
+public class Wrapped_Book
+{
+    let book: mut Book;
+
+    public init(mut self, .book) { }
+
+    public fn take(iso self) { }
+}
