@@ -4,5 +4,5 @@ public abstract class Test
 
 public fn main()
 {
-    let x = Test(); // ERROR cannot construct abstract class
+    let x = Test(); // ERROR cannot initialize abstract class
 }

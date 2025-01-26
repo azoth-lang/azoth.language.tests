@@ -1,6 +1,6 @@
 public fn main() -> byte
 {
-    let x = new ExampleTrait(); // ERROR cannot construct trait
+    let x = ExampleTrait(); // ERROR cannot construct trait
 }
 
 public trait ExampleTrait

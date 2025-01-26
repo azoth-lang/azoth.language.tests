@@ -1,9 +1,9 @@
 public fn main()
 {
-    let x = new Test[const Book]();
-    let y = new Test[id Book]();
-    let x = new Test[mut Book](); // ERROR `mut` is not `shareable`
-    let x = new Test[temp const Book](); // ERROR `temp const` is not `shareable`
+    let x = Test[const Book]();
+    let y = Test[id Book]();
+    let x = Test[mut Book](); // ERROR `mut` is not `shareable`
+    let x = Test[temp const Book](); // ERROR `temp const` is not `shareable`
 }
 
 public class Book { }

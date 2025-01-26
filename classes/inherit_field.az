@@ -9,7 +9,7 @@ public abstract class Abstract
 {
     public let value: byte;
 
-    public new(mut self)
+    public init(mut self)
     {
         .value = 42;
     }
@@ -17,6 +17,6 @@ public abstract class Abstract
 
 public fn main() -> byte
 {
-    let c = new Concrete();
+    let c = Concrete();
     return c.value;
 }
