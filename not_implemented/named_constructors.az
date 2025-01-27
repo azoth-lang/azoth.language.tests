@@ -1,6 +1,0 @@
-public class Test
-{
-    public new named(mut self) // ERROR named constructors not implemented
-    {
-    }
-}
