@@ -7,7 +7,5 @@ public const class Test
 
 public fn main()
 {
-    let _ = new Test();
-    let _ = new Test(42);
 }
 
