@@ -1,0 +1,11 @@
+public class Test
+{
+    public init named(mut self, x: int)
+    {
+    }
+}
+
+public fn main()
+{
+    let _ = Test.named(42);
+}
