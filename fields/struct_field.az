@@ -1,0 +1,15 @@
+// exit code: 42
+
+public const struct Example
+{
+    public let a: byte;
+    public let b: byte;
+
+    public init(self, .a, .b) { }
+}
+
+public fn main() -> byte
+{
+    let x = Example(26, 16);
+    return x.a + x.b;
+}

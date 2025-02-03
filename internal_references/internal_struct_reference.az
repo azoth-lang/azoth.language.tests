@@ -1,0 +1,17 @@
+// exit code: 42
+
+public const class Foo
+{
+    let value: byte;
+
+    public init(self, .value) { }
+
+    public fn reference(self) -> iref byte
+        => iref .value;
+}
+
+public fn main() -> byte
+{
+    let f = Foo(42);
+    return f.reference();
+}
