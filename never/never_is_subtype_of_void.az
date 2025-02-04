@@ -1,0 +1,17 @@
+// exit abort: example
+
+public const class Example[T]
+{
+    public fn example(self) -> T
+    {
+        // Since `T` can be `void` it must be the case that `never <: void`
+        return ABORT("example");
+    }
+}
+
+public fn main()
+{
+    let e = Example[void]();
+    // Since `example` here returns `void`, then `never <: void`
+    e.example();
+}

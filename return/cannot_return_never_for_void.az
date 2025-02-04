@@ -1,0 +1,4 @@
+public fn example1()
+{
+    return ABORT("example1"); // ERROR cannot return even `never` from void function
+}
