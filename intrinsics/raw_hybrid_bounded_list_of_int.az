@@ -11,7 +11,7 @@ public fn main(output: mut Test_Output) -> byte
     if items.count =/= 4 => ABORT("Incorrect count, expected 4");
     if items.at(3) =/= 3 => ABORT("Incorrect item at index 3, expected 3");
 
-    items.set_at(1, 42);
+    items.at(1) = 42;
 
     items.shrink(3);
     if items.count =/= 3 => ABORT("Incorrect count, expected 3");
