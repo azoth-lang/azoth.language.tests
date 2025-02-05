@@ -1,0 +1,17 @@
+// exit code: 42
+
+// This test shows that give a `ref` type one can call a method on it and an implicit deref will be
+// generated to call the method.
+
+public fn main() -> byte
+{
+    let e = Example();
+    let x: ref Example = ref e;
+    return e.example();
+}
+
+public class Example
+{
+    public fn example(self) -> byte
+        => 42;
+}
