@@ -1,0 +1,14 @@
+public fn main()
+{
+    let items: mut = List[size]();
+    items.add(1);
+    items.add(2);
+    items.add(3);
+
+    foreach v in items
+    {
+        let x = items.at(v); // read compiles fine
+        items.add(v); // ERROR cannot mutate list (simple since `add` takes `mut self``)
+        items.at(v) = 0; // ERROR cannot mutate list (complex since `at` takes `temporary self`)
+    }
+}
