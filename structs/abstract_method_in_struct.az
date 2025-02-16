@@ -1,0 +1,4 @@
+public struct Example
+{
+    public abstract fn example(self); // ERROR abstract method in struct
+}
