@@ -1,0 +1,13 @@
+public trait Trait
+{
+    public type T;
+}
+
+public class Class <: Trait
+{
+    public type T = Trait;
+}
+
+public fn main()
+{
+}
