@@ -1,0 +1,16 @@
+// exit code: 42
+
+public class Outer
+{
+    public class Inner
+    {
+        public fn test(self) -> byte
+            => 42;
+    }
+}
+
+public fn main() -> byte
+{
+    let x = Outer.Inner();
+    return x.test();
+}
