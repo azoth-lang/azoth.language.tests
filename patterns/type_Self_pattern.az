@@ -1,0 +1,25 @@
+// exit code: 0
+
+// Unix platforms really only support byte error codes
+public fn main() -> byte
+{
+    var x = Child1();
+
+    // Show that the match can succeed
+    if not x.is_self(Child1()) => return 1;
+
+    // Show that the match can fail
+    if x.is_self(Child2()) => return 2;
+
+    return 0;
+}
+
+public const class Base
+{
+    public fn is_self(self, other: Base) -> bool
+        => other is Self;
+}
+
+public const class Child1: Base { }
+
+public const class Child2: Base { }
