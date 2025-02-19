@@ -3,9 +3,13 @@
 // Unix platforms really only support byte error codes
 public fn main() -> byte
 {
-    let x: byte?? = 42;
+    // Show that the match can fail
+    let x: byte?? = none;
+    if x is let x? => return 1;
 
-    if x is let x?? => return x;
+    // Show that the match can succeed
+    let y: byte?? = 42;
+    if y is let y?? => return y;
 
     return 0;
 }
