@@ -1,0 +1,21 @@
+// exit code: 3
+
+// Unix platforms really only support byte error codes
+public fn main() -> byte
+{
+    // The expected exit code will verify that both conditions were reached
+    return test(Child1()) + test(Child2());
+}
+
+public fn test(v: Base) -> byte
+{
+    if v is Child1 { return 1; }
+    else if v is Child2 { return 2;}
+    return 100;
+}
+
+public const class Base { }
+
+public const class Child1: Base { }
+
+public const class Child2: Base { }
