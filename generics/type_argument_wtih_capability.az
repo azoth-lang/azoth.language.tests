@@ -7,7 +7,7 @@ public fn main() -> byte
     let b: mut = Box[mut Number](n);
     b.mut_value().increment();
 
-    if n ≡/≡ b.read_value() => return 0;
+    if n @=/= b.read_value() => return 0;
 
     return n.value();
 }
