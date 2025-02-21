@@ -4,7 +4,7 @@ public const class Box[T]
 
     public init(self, .v) { }
 
-    public fn value(const self) -> const▷T
+    public fn value(const self) -> const|>T
     {
         let t: const T; // ERROR can't apply capability to type parameter
         return .v;

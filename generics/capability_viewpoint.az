@@ -35,9 +35,9 @@ public class Box[T]
 
     public init(mut self, .value) { }
 
-    public fn get_contents(readable self) -> self▷T => .value;
+    public fn get_contents(readable self) -> self|>T => .value;
 
-    public fn force_get_mut_contents(readable self) -> mut▷T
+    public fn force_get_mut_contents(readable self) -> mut|>T
         => .value; // ERROR cannot convert
 
     public fn set_contents(mut self, value: T)

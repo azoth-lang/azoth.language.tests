@@ -18,9 +18,9 @@ public class Box[T]
 
     public init(mut self, .v) { }
 
-    public fn mut_value(mut self) -> self▷T => .v;
+    public fn mut_value(mut self) -> self|>T => .v;
 
-    public fn read_value(self) -> self▷T => .v;
+    public fn read_value(self) -> self|>T => .v;
 }
 
 public class Number
