@@ -10,7 +10,7 @@ public fn logical_operators(a: bool, b: bool)
 
 public fn arithmetic_operators(a: bool, b: bool)
 {
-    a + b; // ERROR
+    a + b; // ERROR cannot apply operator to bool
 }
 
 public fn literals()
