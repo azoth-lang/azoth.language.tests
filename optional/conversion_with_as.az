@@ -1,0 +1,10 @@
+public fn main()
+{
+    let x = 42 as int?;
+    let b: Book? = Book() as Book?; // ERROR subtype, not implicit conversion
+    let c = b as Book??; // Conversion from `Book?` to `Book??` allowed since optional types aren't reference types
+}
+
+public class Book
+{
+}
