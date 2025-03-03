@@ -1,0 +1,16 @@
+
+public fn main()
+{
+    let s = Struct();
+    let t: Trait = s; // ERROR no implicit boxing
+    accept_trait(s); // ERROR no implicit boxing
+}
+
+
+public const trait Trait { }
+
+public struct Struct <: Trait
+{
+}
+
+public fn accept_trait(_: Trait) { }
