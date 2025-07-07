@@ -2,8 +2,9 @@ public fn main()
 {
     let book: mut Book = Book();
 
-    // The `as Book` shouldn't be necessary
-    test(book as Book, freeze book);
+    // The `read_book()` call shouldn't be necessary. Right now it is needed to force a conversion
+    // to a read alias.
+    test(read_book(book), freeze book);
 
     book.test_modify(); // ERROR `const` due to flow typing
 }
@@ -12,5 +13,7 @@ public class Book
 {
     public fn test_modify(mut self) { }
 }
+
+public fn read_book(b: Book) -> Book => b;
 
 public fn test(b1: Book, b2: const Book) { }
