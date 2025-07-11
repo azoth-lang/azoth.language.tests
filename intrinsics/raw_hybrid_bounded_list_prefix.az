@@ -3,6 +3,6 @@
 public fn main(output: mut Test_Output) -> byte
 {
     let items: mut = Raw_Hybrid_Bounded_List[byte, byte](3, 0);
-    items.\fixed = 42;
-    return items.\fixed;
+    items.prefix = 42;
+    return items.prefix;
 }
