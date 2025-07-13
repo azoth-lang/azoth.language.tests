@@ -1,0 +1,24 @@
+public trait Trait
+{
+    public type T;
+
+    public fn test1(mut self) -> mut T;
+    public fn test2(mut self) -> mut T;
+}
+
+public class Class <: Trait
+{
+    public type T = Class;
+
+    public fn test1(mut self) -> mut T
+        // Shows can return Class when T is expected
+        => Class();
+
+    public fn test2(mut self) -> mut Class
+        // Shows can use Class when overriding
+        => Class();
+}
+
+public fn main()
+{
+}
