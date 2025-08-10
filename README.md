@@ -11,15 +11,15 @@ easy.
 
 The test package consists of two type declarations in the global namespace, extensions to the simple
 types for conversion to string, and any necessary implementation. The two types are a simplified
-`string` struct and a `Test_Output` trait to in lieu of console output.
+`string` value and a `Test_Output` trait to use for output in lieu of console output.
 
 ### Strings
 
-The `string` struct provided by the test harness should be equivalent to the implementation below.
+The `string` value provided by the test harness should be equivalent to the implementation below.
 More methods will likely be necessary internally to support other functionality in the test package.
 
 ```azoth
-published copy struct string
+published const value string
 {
     public let bytes: const Raw_Array[byte];
 

@@ -1,4 +1,4 @@
-// The `int` type is effectively a `const struct` and so should disallow capabilities like one
+// The `int` type is effectively a `const value` and so should disallow capabilities like one
 
 public fn main()
 {
