@@ -9,7 +9,7 @@ public fn main()
 
     take(move book);
 
-    book.modify(); // ERROR `const` due to flow typing
+    book.modify(); // ERROR `id` due to flow typing
 }
 
 public class Book

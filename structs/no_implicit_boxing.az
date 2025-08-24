@@ -7,7 +7,7 @@ public fn main()
 }
 
 
-public const trait Trait { }
+public trait Trait { }
 
 public struct Struct <: Trait
 {
