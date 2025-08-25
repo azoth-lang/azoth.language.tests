@@ -1,8 +1,0 @@
-// exit code: 42
-
-public fn main() -> byte
-{
-    let x: byte = 42;
-    let r: ref byte = ref x;
-    return r;
-}
