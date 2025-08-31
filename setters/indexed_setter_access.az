@@ -1,0 +1,18 @@
+// exit code: 65
+
+public class Test
+{
+    public var value: byte;
+
+    public set setter(mut self, index: byte, value: byte)
+    {
+        .value = index * value;
+    }
+}
+
+public fn main() -> byte
+{
+    let t: mut Test = Test();
+    t.setter(5) = 13;
+    return t.value;
+}
