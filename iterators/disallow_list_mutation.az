@@ -7,8 +7,8 @@ public fn main()
 
     foreach v in items
     {
-        let x = items.at(v); // read compiles fine
+        let x = items.get(v); // read compiles fine
         items.add(v); // ERROR cannot mutate list (simple since `add` takes `mut self``)
-        items.at(v) = 0; // ERROR cannot mutate list (complex since `at` takes `temporary self`)
+        items.set(v, 0); // ERROR cannot mutate list (complex since `at` takes `temporary self`)
     }
 }

@@ -10,6 +10,6 @@ public fn main(output: mut Test_Output) -> void
 
     foreach i/*: size*/ in 0..<100
     {
-        output.write_line(items.at(i as! size).to_display_string());
+        output.write_line(items.get(i as! size).to_display_string());
     }
 }
