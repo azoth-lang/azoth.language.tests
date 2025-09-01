@@ -1,0 +1,17 @@
+public class Test1
+{
+    public get set(self) -> byte // ERROR a getter cannot be named `set`
+        => 42;
+}
+
+public class Test2
+{
+    public get \set(self) -> byte // ERROR a getter cannot be named `set`
+        => 42;
+}
+
+public class Test3
+{
+    public get \"set"(self) -> byte // ERROR a getter cannot be named `set`
+        => 42;
+}

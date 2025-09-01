@@ -1,0 +1,23 @@
+public class Test1
+{
+    public var value: byte;
+
+    public set get(mut self, value: byte) // ERROR a setter cannot be named `get`
+        => .value = value;
+}
+
+public class Test2
+{
+    public var value: byte;
+
+    public set \get(mut self, value: byte) // ERROR a setter cannot be named `get`
+        => .value = value;
+}
+
+public class Test3
+{
+    public var value: byte;
+
+    public set \"get"(mut self, value: byte) // ERROR a setter cannot be named `get`
+        => .value = value;
+}
