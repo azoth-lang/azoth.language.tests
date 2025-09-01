@@ -1,0 +1,11 @@
+// exit code: 15
+
+public fn main() -> byte
+{
+    let class: byte = 1;
+    let struct: byte = 2;
+    let value: byte = 3;
+    let get: byte = 4;
+    let set: byte = 5;
+    return class + struct + value + get + set;
+}
