@@ -1,0 +1,4 @@
+public value Value
+{
+    public abstract fn example(self); // ERROR abstract method in value
+}
