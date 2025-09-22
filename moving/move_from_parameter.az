@@ -1,7 +1,7 @@
 public fn test(
     isolated: iso Book,
     mutable: mut Book,
-    readonly: Book,
+    read_: Book,
     constant: const Book,
     identity: id Book)
 {
@@ -13,9 +13,9 @@ public fn test(
     read_book(mutable); // ERROR is `id Book`
     identify(mutable);
 
-    take(move readonly); // ERROR cannot recover isolation
-    read_book(readonly); // ERROR is `id Book`
-    identify(readonly);
+    take(move read_); // ERROR cannot recover isolation
+    read_book(read_); // ERROR is `id Book`
+    identify(read_);
 
     take(move constant); // ERROR cannot move from `const`
     read_book(constant); // Allowed because still `const Book` because `const` doesn't participate in flow typing
