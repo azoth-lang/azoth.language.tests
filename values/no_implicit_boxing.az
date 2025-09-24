@@ -1,0 +1,14 @@
+public fn main()
+{
+    let v = Value();
+    let t: Trait = v; // ERROR no implicit boxing
+    accept_trait(v); // ERROR no implicit boxing
+}
+
+public trait Trait { }
+
+public value Value <: Trait
+{
+}
+
+public fn accept_trait(_: Trait) { }
