@@ -1,21 +1,21 @@
-public class Example[TIn in, T, TNonwritableOut nonwritable out, TOut out] <:
+public class Example[TIn in, T, TReadOnlyOut readonly out, TOut out] <:
     In[TIn],
-    Inv[T], In[T], NonwritableOut[T], Out[T],
-    NonwritableOut[TNonwritableOut], Out[TNonwritableOut],
+    Inv[T], In[T], ReadOnlyOut[T], Out[T],
+    ReadOnlyOut[TReadOnlyOut], Out[TReadOnlyOut],
     Out[TOut],
 
-    In[TNonwritableOut], // ERROR cannot use `nonwritable out` parameter in `in` position
-    In[TOut], // ERROR cannot use `nonwritable out` parameter in `in` position
+    In[TReadOnlyOut], // ERROR cannot use `readonly out` parameter in `in` position
+    In[TOut], // ERROR cannot use `readonly out` parameter in `in` position
     Inv[TIn], // ERROR cannot use `in` parameter in invariant position
-    Inv[TNonwritableOut], // ERROR cannot use `nonwritable out` parameter in invariant position
+    Inv[TReadOnlyOut], // ERROR cannot use `readonly out` parameter in invariant position
     Inv[TOut], // ERROR cannot use `out` parameter in invariant position
-    NonwritableOut[TIn], // ERROR cannot use `in` parameter in `nonwritable out` position
-    NonwritableOut[TOut], // ERROR cannot use `out` parameter in `nonwritable out` position
+    ReadOnlyOut[TIn], // ERROR cannot use `in` parameter in `readonly out` position
+    ReadOnlyOut[TOut], // ERROR cannot use `out` parameter in `readonly out` position
     Out[TIn] // ERROR cannot use `in` parameter in `out` position
 {
 }
 
 public trait In[T in] { }
 public trait Inv[T] { }
-public trait NonwritableOut[T nonwritable out] { }
+public trait ReadOnlyOut[T readonly out] { }
 public trait Out[T out] { }
