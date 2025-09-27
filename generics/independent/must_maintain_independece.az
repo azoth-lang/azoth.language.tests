@@ -18,7 +18,7 @@ public trait Pipeline[T]
     public fn process(self, value: T) -> T;
 }
 
-public class Storage[T ind]
+public class Storage[independent T]
 {
     let value: T;
     let pipeline: Pipeline[T]; // ERROR does not maintain the independence

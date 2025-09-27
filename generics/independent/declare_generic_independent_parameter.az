@@ -2,6 +2,6 @@ public fn main() -> void
 {
 }
 
-public class Test[T ind]
+public class Test[independent T]
 {
 }
