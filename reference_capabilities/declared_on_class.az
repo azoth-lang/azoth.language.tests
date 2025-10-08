@@ -2,7 +2,7 @@ public const class Const
 {
 }
 
-public xmut class XMut // ERROR not allowed on class
+public read class Read // ERROR not allowed on class
 {
 }
 

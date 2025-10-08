@@ -3,7 +3,7 @@ public fn main()
     let a: iso Book; // ERROR cannot declare `iso` of constant struct
     let b: mut Book; // ERROR cannot declare `mut` of constant struct
     let d: Book;
-    let e: const Book;
+    let e: const Book; // TODO should this be disallowed?
     let f: id Book;
 }
 
@@ -11,7 +11,7 @@ public fn example(
     a: iso Book, // ERROR cannot declare `iso` of constant struct
     b: mut Book, // ERROR cannot declare `mut` of constant struct
     d: Book,
-    e: const Book,
+    e: const Book, // TODO should this be disallowed?
     f: id Book)
 {
 }

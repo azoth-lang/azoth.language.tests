@@ -11,7 +11,7 @@ public class Book
         // Can read `let : const`
         let first_author: const Author = .first_author;
         let second_author: const Author = .second_author; // ERROR cannot read var
-        .second_author = Author(); // ERROR cannot access `var` field from `id`
+        .second_author = Author(); // ERROR cannot write `var` field from `id`
         let third_author: const Author = .third_author; // ERROR cannot read `mut`
         let third_author_id: id Author = .third_author;
     }

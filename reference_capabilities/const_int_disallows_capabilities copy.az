@@ -5,7 +5,7 @@ public fn main()
     let a: iso int; // ERROR cannot declare `iso` of `int`
     let b: mut int; // ERROR cannot declare `mut` of `int`
     let d: int;
-    let e: const int;
+    let e: const int; // TODO should this be disallowed?
     let f: id int;
 }
 
@@ -13,7 +13,7 @@ public fn example(
     a: iso int, // ERROR cannot declare `iso` of `int`
     b: mut int, // ERROR cannot declare `mut` of `int`
     d: int,
-    e: const int,
+    e: const int, // TODO should this be disallowed?
     f: id int)
 {
 }
