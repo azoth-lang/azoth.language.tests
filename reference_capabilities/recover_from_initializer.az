@@ -1,0 +1,18 @@
+public fn main()
+{
+    // TODO currently this requires `move` perhaps implicit recovery should be allowed when calling initializers?
+    take(move Book(Author()));
+}
+
+public class Author { }
+
+public class Book
+{
+    public let author: Author;
+
+    public init(mut self, .author) { }
+}
+
+public fn take(book: iso Book)
+{
+}
