@@ -1,4 +1,4 @@
-public class Example[TIn in, T, TReadOnlyOut readonly out, TOut out] <:
+public class Example[TIn in, T, TReadOnlyOut readonly out, TOut out]:
     In[TIn],
     Inv[T], In[T], ReadOnlyOut[T], Out[T],
     ReadOnlyOut[TReadOnlyOut], Out[TReadOnlyOut],

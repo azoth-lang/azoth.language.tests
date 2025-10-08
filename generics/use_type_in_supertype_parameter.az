@@ -2,7 +2,7 @@ public fn main()
 {
 }
 
-public class Test : Base[Test]
+public class Test inherits Base[Test]
 {
 }
 

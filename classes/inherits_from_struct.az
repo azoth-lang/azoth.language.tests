@@ -2,7 +2,7 @@ public const struct Abstract
 {
 }
 
-public class Concrete <: Abstract // ERROR
+public class Concrete inherits Abstract // ERROR
 {
 }
 

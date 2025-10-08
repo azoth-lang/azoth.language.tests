@@ -12,7 +12,7 @@ public class Test[shareable T in]
 {
 }
 
-public class Subclass <:
+public class Subclass:
     Test[const Book],
     Test[mut Book] // ERROR `mut` is not `shareable`
 { }

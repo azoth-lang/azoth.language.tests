@@ -4,27 +4,27 @@ public trait Shareable_Independent[independent(shareable) T] { }
 
 
 public class Independent_Inherit_Not[independent T]
-    <: Not_Independent[T] // ERROR
+    : Not_Independent[T] // ERROR
 { }
 
 public class Independent_Inherit_Independent[independent T]
-    <: Independent[T]
+    : Independent[T]
 { }
 
 public class Independent_Inherit_Shareable[independent T]
-    <: Shareable_Independent[T]
+    : Shareable_Independent[T]
 { }
 
 
 public class Shareable_Inherit_Not[independent(shareable) T]
-    <: Not_Independent[T] // ERROR
+    : Not_Independent[T] // ERROR
 { }
 
 public class Shareable_Inherit_Independent[independent(shareable) T]
-    <: Independent[T] // ERROR
+    : Independent[T] // ERROR
 { }
 
 
 public class Shareable_Inherit_Shareable[independent(shareable) T]
-    <: Shareable_Independent[T]
+    : Shareable_Independent[T]
 { }

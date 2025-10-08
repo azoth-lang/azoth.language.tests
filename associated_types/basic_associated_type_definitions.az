@@ -3,7 +3,7 @@ public trait Trait
     public type T;
 }
 
-public class Class <: Trait
+public class Class: Trait
 {
     public type T = Trait;
 }

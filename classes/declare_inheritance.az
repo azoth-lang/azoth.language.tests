@@ -1,4 +1,4 @@
-public class Concrete: Abstract
+public class Concrete inherits Abstract
 {
 }
 

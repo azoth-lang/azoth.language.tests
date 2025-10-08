@@ -9,7 +9,7 @@ public fn main()
 
 public trait Trait { }
 
-public struct Struct <: Trait
+public struct Struct: Trait
 {
 }
 

@@ -6,7 +6,7 @@ public fn main() -> byte
     return example.get_value() + example.get_value_from_trait();
 }
 
-public class ExampleClass <: ExampleTrait
+public class ExampleClass: ExampleTrait
 {
     public fn get_value(self) -> byte
     {

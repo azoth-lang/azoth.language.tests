@@ -38,7 +38,7 @@ public class Storage[independent T]
         => p.process(.value);
 }
 
-public class Book_Editor <: Pipeline[mut Book]
+public class Book_Editor: Pipeline[mut Book]
 {
     public fn process(self, book: mut Book) -> mut Book
     {

@@ -8,4 +8,4 @@ public class Test[TIn in, TOut out]
 }
 
 public class A { }
-public class B <: A { }
+public class B inherits A { }

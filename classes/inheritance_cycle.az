@@ -1,0 +1,7 @@
+public class A inherits C { } // ERROR cycle in supertype
+
+public class B inherits A { } // ERROR cycle in supertype
+
+public class C inherits B { } // ERROR cycle in supertype
+
+public class Tail inherits C { }

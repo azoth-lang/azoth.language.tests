@@ -6,7 +6,7 @@ public trait Trait
     public fn test2(mut self) -> mut T;
 }
 
-public class Class <: Trait
+public class Class: Trait
 {
     public type T = Class;
 

@@ -7,7 +7,7 @@ public fn main()
 
 public trait Trait { }
 
-public value Value <: Trait
+public value Value: Trait
 {
 }
 

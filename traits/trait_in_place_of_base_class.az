@@ -2,7 +2,7 @@ public fn main() -> byte
 {
 }
 
-public class ExampleClass: ExampleTrait // ERROR cannot use trait as base class
+public class ExampleClass inherits ExampleTrait // ERROR cannot use trait as base class
 {
 }
 

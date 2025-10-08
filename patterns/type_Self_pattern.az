@@ -20,6 +20,6 @@ public const class Base
         => other is Self;
 }
 
-public const class Child1: Base { }
+public const class Child1 inherits Base { }
 
-public const class Child2: Base { }
+public const class Child2 inherits Base { }
