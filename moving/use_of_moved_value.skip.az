@@ -1,13 +1,12 @@
 public fn main()
 {
-    let book: Book = Book();
+    let book: iso Book = Book();
     take(move book);
-    // Since `Book` is a value type, moving it leaves an unusable value behind
+    // Since `Book` is a struct type, moving it leaves an unusable value behind
     let borrow = book; // ERROR use of moved value
 }
 
-// TODO struct not implemented
-public move struct Book
+public struct Book
 {
 }
 

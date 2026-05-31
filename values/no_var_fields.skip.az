@@ -1,0 +1,6 @@
+public value Value
+{
+    var field: int; // ERROR var field in value
+
+    public init(mut self, .field) { }
+}

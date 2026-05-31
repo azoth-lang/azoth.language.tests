@@ -1,0 +1,14 @@
+public struct Struct
+{
+    public fn use(self) { }
+}
+
+public fn main()
+{
+    var previous: iso = Struct(); // a value to reference until the temporary is referenced
+    var r: mut Struct = previous;
+    {
+        r = Struct(); // Create a reference to a temporary
+    } // ERROR the temporary goes out of scope with ownership and must be recovered
+    r.use(); // use `r` so that it is still alive
+}

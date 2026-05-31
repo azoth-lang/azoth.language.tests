@@ -1,0 +1,26 @@
+// stdout file: stdout.txt
+
+public class Base
+{
+    public init(mut self, output: mut Test_Output)
+    {
+        output.write_line("enter base initializer");
+        output.write_line("exit base initializer");
+    }
+}
+
+public class Derived : Base
+{
+    public init(mut self, output: mut Test_Output)
+    {
+        output.write_line("enter derived initializer");
+        base.init(output);
+        output.write_line("exit derived initializer");
+    }
+}
+
+public fn main(output: mut Test_Output)
+{
+    let _ = Derived(output);
+}
+

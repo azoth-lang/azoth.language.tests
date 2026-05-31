@@ -1,0 +1,21 @@
+// exit code: 42
+
+public class Base
+{
+    public fn method(self) -> byte
+    {
+        return 42;
+    }
+}
+
+public class Test : Base
+{
+    public fn method(self) -> byte
+        => base.method();
+}
+
+public fn main() -> byte
+{
+    let t: Test = Test();
+    return t.method();
+}

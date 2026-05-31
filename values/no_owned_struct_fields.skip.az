@@ -1,0 +1,15 @@
+public struct Struct { }
+
+public value Value1
+{
+    let field: mut Struct; // Allowed because this is a reference
+
+    public init(mut self, .field) { }
+}
+
+public value Value2
+{
+    let field: iso Struct; // ERROR owned struct field in a value
+
+    public init(mut self, .field) { }
+}
