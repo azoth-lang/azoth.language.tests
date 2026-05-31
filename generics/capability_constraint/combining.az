@@ -1,0 +1,31 @@
+public fn main()
+{
+    let box = Box[iso Book](Book());
+    let opener: mut = Opener[mut Book](box);
+    /* _ = */ opener.open();
+}
+
+public class Book { }
+
+public class Box[independent T]
+{
+    let value: T;
+
+    public init(self, .value) { }
+
+    published fn get(self) -> aliasable T => .value;
+}
+
+public class Opener[/* implicit aliasable */ T]
+{
+    let box: Box[T];
+
+    public init(mut self, .box) { }
+
+    public fn open(mut self) -> T
+        // Here the implicit `aliasable` constraint on type parameter `T` must combine with the
+        // explicit `aliasable` constraint on the return type of `get()` to produce the type `T`.
+        // This makes sense since `T` is already constrained to be aliasable. So upcasting to
+        // aliasable has no effect and produces `T`.
+        => .box.get();
+}
