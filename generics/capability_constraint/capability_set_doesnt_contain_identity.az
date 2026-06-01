@@ -1,0 +1,10 @@
+public class Box[independent T]
+{
+    let value: T;
+
+    public init(self, .value) { }
+
+    published fn get(self)
+        -> readable T // ERROR cannot use capability set that doesn't contain `id` as constraint
+        => .value;
+}
