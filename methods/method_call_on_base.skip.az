@@ -10,7 +10,7 @@ public class Base
 
 public class Test : Base
 {
-    public fn method(self) -> byte
+    public fn method(self) -> byte overrides
         => base.method();
 }
 

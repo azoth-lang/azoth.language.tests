@@ -7,7 +7,7 @@ public abstract class Abstract
 
 public class Concrete: Abstract
 {
-    public /*override*/ fn method(self) -> byte
+    public fn method(self) -> byte overrides
     {
         return 42;
     }
